@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Landed</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Layouts</a>
+								<ul>
+									<li><a href="left-sidebar.html">Left Sidebar</a></li>
+									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option 1</a></li>
+											<li><a href="#">Option 2</a></li>
+											<li><a href="#">Option 3</a></li>
+											<li><a href="#">Option 4</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="elements.html">Elements</a></li>
+							<li><a href="#" class="button primary">Sign Up</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2> Redes neuronales convolucionales</h2>
+							<p><em>"¿Comó ven las computadoras? "</em></p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<a href="#" class="image fit"><img src="images/vision.jpg" alt="" /></a>
+								
+								Bienvenidos a este blog que he realizado con la finalidad de explicar el funcionamiento de las redes neuronales convolucionales, en realidad es más
+								que nada un parentesis, ya que mi plan es ir colgando diferentes proyectos en la página y algunos de ellos están más difíciles que comer sopa con tenedor,
+								entonces no quiero que parezca que estoy haciendo magia.
+								Debido a eso pretendo ilustrarles con un ejemplo básico que muestre el funcionamiento de las redes neuronales convoluciones con el fin de que tengan una idea
+								y puedan entender que es lo que pasa.<br><br>
+									
+						
+								<h3>Introducción </h3>
+									
+								<p>
+									El desarrollo de las redes neuronales ha generado grandes avances en el campo de visión por computadora de hecho
+									es particularmente interesante, ya que a diferencia de  otras áreas de las matemáticas y ciencias de la computación que se han centrado más 
+									que nada en la creación y modelado de objetos 3D, Las redes neuronales convolucionales resultan interesantes por que no se trata solamente del
+									acto de observar, sino que al igual que los humanos el acto de observar pasa a ser una actividad secundaria podría decirse
+									que la visión es utilizada en humanos y computadoras como una fuente de información bastante valiosa para poder realizar
+									una actividad primaria.<br><br>
+
+									
+
+	
+									
+									
+								
+								</p>
+								<h3></h3>
+								
+								<ul>
+									<hr>	
+										
+									<li><h3>Redes neuronales convolucionales</h3></li>
+										<p><i>"Siempre he pensado que pensado que un ejemplo es la mejor forma para explicar un tema" (Me lo acabo de inventar pero queda genial) </i>. Así que me he armado un ejemplo 
+											con el que van a poder comprender el tema y les va a encantar tanto que desearan hacer sus propias redes neuronales en la madrugada
+											todos frustrados sin saber por qué no les sale como le pasa a un amigo que no soy yo.<br><br>
+											
+											Tomare de ejemplo una imagen sencilla que me piratie del wikipedia pero la he simplificado un monton con el fin de explicar el proceso: <i>sencilla quiere decir que la imagen es en blanco y negro, las imagenes a color poseen tres canales rgb cuyo procesamiento
+											requiere del mismo principio pero de un mayor numero de operaciones asi que para no confundirlos con tanta sabiduria la imagen sera de un solo canal.</i>
+
+											<p class="alimagen">
+													<img src="images/byw.jpg" alt="neo" align="center" >
+											</p>
+
+
+										
+										<h3>¿Como ven las computadoras?</h3>	
+										Los seres humanos poseemos sentidos bastante agudos de los cuales damos por sentado su increible capacidad de procesamiento (en realidad el que procesa es el cerebro pero estoy corto de inspiracion). debido al uso cotidiano a nadie se le atribuye una habilidad
+										excepcional por tener la capacidad de  ver, caminar o hablar (mientras sea un ser humano). pero cuando una computadora realiza una de esas actgividades 
+										se considera un acto increible.<br>
+										Entonces si las computadoras no poseen esos sentidos que los humanos tienen como podria entonces una computadora ver de la manera que nosotros los super homo deus lo hacemos 
+										
+										
+										<h3>procesamiento</h3>
+										es necesario aclarar que obviamente una computadora no va a ver las imagenes tal como un humano, las computadoras al no tener la forma de procesar la informacion visual como los humanos
+										que lo hacemos en 3D gracias a nuestros sensores del mundo real (ojos) estas interpretan las imagenes de forma diferente, las computadoras utilizan para ver sensores del mundo real 
+										como camaras de video, aunque podrian considerarse parecidas al ojo humano no procesan la informacion de igua manera. aun asi ha resultado ser mas que suficiente en muchas areas
+										tal como en el caso de las redes neuronales. en el mundo digital lo que se interpreta de una imagen en realidad son sus pixeles, los pixeles conforman la imagenm y pueden ser 
+										analizados uno por uno si es necesario, aunque dependeiendo del analizsis puede llegar a implicar un gran poder de procesamiento. cada pixel en la pantalla tiene un valor de intensidad
+										de hecho desde el dibujo de una linea hasta la fotografia de un paisaje esta conformado de esa manera.
+
+
+
+
+										<br><br>
+										<h3>Procesamiento </h3>
+										Al mismo tiempo que les muestro el proceso de convolucion les voy a explicar como ve una imagen la computadora y no es que sea yo un super genio es que en realidad
+										no es opcional, les tengo que explicar como lo hace para que comprendan el proceso de convolucion. 
+										tomare como ejemplo la imagen de la pequeña lupe, en la que vamos a hacer de cuenta lo siquiente: vamos a suponer que la imagen de la pequeña lupe esta conformada 
+										por 8 px a lo largo y 8 a lo alto, es decir es unaimagen de 8px por 8px de un solo canal (osea que es blanco y negro). 						
+									</p>
+											<br><br>
+										
+
+										<p class="alimagen">
+												<img src="images/mona.jpg" alt="neo" align="center" >
+										</p>
+									
+										
+										<p>como podemos ver en la imagen de la pequeña lupe se ha trazado una cuadricula cuya funcion es representar cada uno de los pixeles de la imagen (8x8)
+											en el centro podemos ver una transicion, es la misma imagen de la lupe pero ahora con unos numeros extraños muy a lo codigo davinci que en realidad
+											es el valor de intensidad de cada pixel que conforma la imagen y por ultimo vemos una matriz solo de numeros que representa la forma en la que la computadora 
+											ve las imagenes, como una matriz de numeros cuyo valor de cada celda representa la intensidad del pixel y su conjunto forma la imagen.
+											de hecho una vez tomada la imagen de esa manera puedes hacer un monton de operaciones con los pixeles, debido a su cercania.
+											
+										</p> 
+										
+										
+										<h3> convolucion </h3>
+										<p>ahora comienza lo bueno, lo de antes ya estaba bueno pero esto esta aun mas. ¿tienen ustedes idea de como extraer las caracteristicas de las imagenes? ¿ como va a saber la compu
+										   que una la de la imagen es la pequeña lupe y no un horrible como el payaso broso por ejemplo o shrek?. para los que no saben pues aqui les voy a mostrar de donde viene el nombre de: "Redes neuronales convolucionales" <br>
+										   como ya les habia dicho la computadora lo que ve son numeros y entre todos los numeros la mayoria de las veces se forma un patron, dicho patron puede ser identificado mediante las tecnicas matematicas adecuadas.
+										   y la tecnica adecuada se llama convolucion. 
+
+										   
+										   El proceso de convolucion que consiste en aplicar un fitro a la imagen el filtro recorre toda la imagen con la finalidad de ver que es lo que contiene y donde se encuentra.
+										   que pelada no? primero que nada un filtro es basicamente un detector de rasgos o caracteristicas, seria como decir "aqui esta la foto de la lupe algoritmo identificame todas las lineas verticales en la imagen pero para ayer..."
+										   y pues el algoritmo todo estresado tiene que recorrer toda la imagen en busca de las lineas que le pediste.
+
+										  
+										   
+										   <p class="alimagen">
+												<img src="images/filt.jpg" alt="neo" align="center" >
+										   </p>
+
+										   en la imagen podemos ver la representacion del proceso de convolucion  donde tenemos del lado izquierdo la imagen de lapequeña lupé en el centro el filtro que detecta en la imagen
+										   lineas verticales y como resultado una matriz que es la imagen solo que ahora con menos pixeles (6x6) digamos que es el costo del proceso cada vez que se le aplican filtros la imagen se reduce 
+										   no se trata solo de recorrer la imagen al mismo tiempo se van haciendo una serie de operaciones cuyo resultado es almacenado en otra "matriz" que es en realidad
+										   de donde vamos a darnos cuenta si hay algo que nos interese en la imagen o no. <br><br>
+
+
+										   <h3>Pooling</h3>
+
+										   Despues de haber aplicado la tecnica de convolucion en la imagen de la lupe obtenemos como resultado la matrix de 6px de ancho por 6px de ancho 
+										   que en realidad es otra interpretacion de la misma imagen de la lupe, y lo que nos muestra es todas aquellas areas en las que es posible que 
+										   exista una linea vertical, ya que nuestro filtro era para eso para detectar bordes verticales. 
+										   no lo dice como "hey aqui estan las lineas mira" mas bien es algo como lo siguiente:<br><br>
+
+
+										   <p class="alimagen">
+											<img src="images/pool.jpg" alt="neo" align="center" >
+									   </p>
+
+									   En la imagen podemos ver señalado en color aquellas casillas en las que el proceso de convolucion nos arrojo el valor mas alto, la tecnica de max-pooling 
+									   consiste en revisar cada celda obtenida como resultado del proceso de convolucion y encontrar aquellas con el valor maximo con la esperanza de que tal vez
+									   en esa zona se encuentre un borde vertical (segun el filtro que se aplique) entre mas alto el valor es mas probable que se encuentre el rasgo deseado.
+									   El proceso de Max-pooling reduce la dimension de la imagen mediante la reduccion del numero de pixeles de la imagen original. 
+										 <br>
+										 
+										Como se puede apreciar debido a las operaciones las dimensiones de la imagen son afectadas originalmente la imagen de la lupe comenzo como deb 8 px de ancho 
+										por 8px de alto, al aplicar el filtro de reconocimiento de bordes verticales (convolucion) la imagen paso de 8 a 6px de ancho por 6px de alto y por ultimo 
+										al aplicar max pooling 
+
+
+
+
+
+
+
+
+									   algunos de ustedes tal vez jamas en la vida tengan que aplicar Max-pooling en la vida ya que tal vez trabajen enun area totalmente diferente asi que 
+									   si alguna vez llegan a hacerlo deben de tomar en cuenta
+									   Hasta este punto ya se ha creado una capa de la red neuronal. asi que es importante recapitular y ver el resultado de lo que tenemos hasta este momento 
+									   la informacion que hemos adquirido hasta ahora podriamos representarla formalmente de la siuqiente manera
+
+
+									   <br><br>
+
+									   <p class="alimagen">
+										<img src="images/alucine 2.jpg" alt="neo" align="center" >
+								   </p>
+
+
+									   Obviamente exagerando ya que solo hemos aplicado un filtro de reconocimiento de bordes verticales a la imagen de la lupe la imagen no quedara como el lado derecho
+									   digamos que aplicamos unos 10 filtros de deteccion a la imagen y como resultado despues del maxpooling obtenemos la siguiente imagen 
+
+
+									   <br><br>
+
+									   <p class="alimagen">
+										<img src="images/por fin.jpg" alt="neo" align="center" >
+								   </p>
+										   
+
+
+
+
+
+										</p>	
+										</p>
+
+
+										</p>
+										<hr>
+									<li><h3>De aquí pal' real </h3></li>
+										<p>Todo lo que se encuentre debajo de esa línea gris que acabo de dibujar será pura explicación dura y directa de algoritmos de aprendizaje, de manera que si no estas preparado para ver matemáticas de las que llevan letras del 
+											alfabeto griego y números en el mismo renglón.<a href="https://www.youtube.com/watch?v=I67cgXr6L6o&list=PLrCxuarfkw8qHUpp1HNz6N84XEAZzjIvn" > Picale a este enlace y te Redirigirá  a un playlist de shakira cuando estaba gordita y cantaba
+											bien (pies descalzos y todas esas)</a>
+										</p>
+									<style>
+										.alimagen{
+										   text-align: center;
+										   height = "21";
+  										   width = "21";
+										}
+										}
+									</style>
+									
+										<ul>
+											<li><a href="https://nbviewer.jupyter.org/github/axeluriben/axeluriben.github.io/blob/95272c4ac8f30bd177a170cde664663f9f7619fb/regtree.ipynb" >Aprendizaje supervisado</a></li>
+												<ul>
+													<li>Regresión lineal</li>
+												</ul>
+											
+
+										</ul>
+									
+								
+								</ul>
+							</section>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
