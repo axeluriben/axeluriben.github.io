@@ -58,18 +58,21 @@
 								
 								Bienvenidos a este blog que he realizado con la finalidad de explicar el funcionamiento de las redes neuronales convolucionales, en realidad es más
 								que nada un paréntesis, ya que mi plan es ir colgando diferentes proyectos en la página y algunos de ellos están más difíciles que comer sopa con tenedor,
-								entonces no quiero que parezca que estoy haciendo magia cuando explique las cosas.
-								Debido a eso pretendo ilustrarles con un ejemplo básico el funcionamiento de las redes neuronales convoluciones con la esperanza de que tengan una idea
-								y no se enfaden (no es un tema aburrido) tanto más adelante que ponga los ejemplos con mayor complejidad.<br><br>
+								entonces no quiero que parezca que estoy haciendo magia cuando ponga los proyectos.
+								Entonces, pretendo ilustrarles con un ejemplo básico el funcionamiento de las redes neuronales convolucionales con la esperanza de que tengan una idea del funcionamiento
+								y no se enfaden tanto más adelante que ponga los ejemplos con mayor complejidad.
+								
+								
+								<br><br>
 									
 						
 								<h3>Introducción </h3>
 									
 								<p>
 									El desarrollo de las redes neuronales ha generado grandes avances en el campo de visión por computadora de hecho
-									es interesante ver que a diferencia de  otras áreas de las matemáticas y ciencias de la computación que se han centrado más 
-									que nada en la creación y modelado de objetos 3D, Las redes neuronales convolucionales resultan bastante practicas por que no se trata solamente del
-									acto de observar, sino que al igual que los humanos el acto de observar pasa a ser una actividad secundaria podría decirse
+									es interesante ver que a diferencia de otras áreas de las matemáticas y ciencias de la computación que se han centrado más
+									que nada en la creación y modelado de objetos 3D, Las redes neuronales convolucionales han resultado ser bastante practicas, ya que no se trata solamente del
+									acto de observar, sino que al igual que los humanos el acto de observar pasa a ser una actividad secundaria, podría decirse
 									que la visión es utilizada en humanos y computadoras como una fuente de información bastante valiosa para poder realizar
 									una actividad primaria.<br><br>
 
@@ -86,13 +89,16 @@
 									<hr>	
 										
 									<li><h3>Redes neuronales convolucionales</h3></li>
-										<p><i>"Siempre he pensado que pensado que un ejemplo es la mejor forma para explicar un tema" (Me lo acabo de inventar pero queda genial) </i>. Así que me he armado un ejemplo 
-											con el que van a poder comprender el tema y les va a encantar tanto que desearan hacer sus propias redes neuronales en la madrugada
-											todos frustrados sin saber por qué no les sale como le pasa a un amigo que no soy yo.<br><br>
-											
-											Tomare de ejemplo una imagen sencilla que me piratie del wikipedia pero la he simplificado un monton con el fin de explicar el proceso: <i>sencilla quiere decir que la imagen es en blanco y negro, las imagenes a color poseen tres canales rgb cuyo procesamiento
-											requiere del mismo principio pero de un mayor numero de operaciones asi que para no confundirlos con tanta sabiduria la imagen sera de un solo canal.</i>
+										<p><i>"Siempre he pensado que pensado que un ejemplo es la mejor forma para explicar un tema" (Nunca lo había pensado en mi vida pero queda genial y hasta suena a cierto). Así que me he armado un ejemplo
+										con el que van a poder comprender el tema y les va a encantar tanto que desearan hacer sus propias redes neuronales en la madrugada
+										todos frustrados sin saber por qué no les sale como le pasa a un amigo que obviamente no soy yo.<br><br>
+										Tomaré de ejemplo una imagen sencilla, la foto de una niña a la que he llamado la pequeña Lupe. Con la imagen de la Lupe voy a explicar todo el rollo de la manera más sencilla que pueda, más que nada me interesa ilustrar todo el rollo del procesamiento de la imagen y tal.
 
+										Antes de pasar a la imagen de la Lupe les voy a bombardear el cerebro con información que cura:
+
+										Generalmente las imágenes a color que ustedes ven en las computadoras están compuestas por 3 canales : rojo, verde y azul (RGB), esta imagen de la Lupe va a estar simplificada, sera una imagen en blanco y negro.
+
+										Hago esto con la finalidad de disminuir el número de operaciones en nuestro ejemplo y la complejidad de la explicación.
 											<p class="alimagen">
 													<img src="images/byw.jpg" alt="neo" align="center" >
 											</p>
