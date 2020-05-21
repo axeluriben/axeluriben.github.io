@@ -187,7 +187,7 @@
 
 										  En esta etapa llamada pooling el contenido de la imagen comienza a tomar forma,
 
-										El pooling permite analizar el contenido de la imagen generada por la convolución, mediante el análisis cada región de la misma, con la finalidad de extraer la información más representativa de esta<br> (resulta ser una operación de gran utilidad, ya que reduce la cantidad de datos que se procesaran y mantiene la información).<br><br>
+										El pooling permite analizar el contenido de la imagen generada por la convolución, mediante el análisis cada región de la misma, con la finalidad de extraer la información más representativa de esta(resulta ser una operación de gran utilidad, ya que reduce la cantidad de datos que se procesaran y mantiene la información).<br><br>
 
 										La forma en la que analiza las regiones es aplicando un filtro  llamado max-pooling, el tamaño del filtro para el ejemplo de la Lupe sera de 3x3 y recorrerá la imagen de izquierda a derecha y después hacia abajo hasta terminar la imagen, avanzando 3 pixeles por iteración (al avance se le llama "stride"), es similar al filtro en el 
 										proceso de convolución, la diferencia entre esta operación y la convolución es que cuando se aplica max-pooling no se realiza ninguna operación aritmética sobre los píxeles, sino que extrae el valor máximo encontrado en cada región con el tamaño de región que especificamos (3x3) y crea otra imagen de menor resolución. <br>
