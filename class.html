@@ -182,8 +182,8 @@
 										 
 										   <h3>Pooling</h3>
 										   										   
-										  Después de haber aplicado la técnica de convolución sobre la imagen de la Lupe, obtenemos como resultado una imagen de (6x6), es la misma imagen de la Lupe solo que con menor resolución. Hasta este punto aún no sabemos que es lo que hay en la imagen
-										  (nosotros obviamente si lo sabemos, pero digamos que la compu no).<br>
+										  Después de haber aplicado la operación de convolución sobre la imagen de la Lupe, obtenemos como resultado una imagen de (6x6), es la misma imagen de la Lupe solo que con menor resolución. Hasta este punto aún no sabemos que es lo que hay en la imagen
+										  (nosotros obviamente si lo sabemos, pero digamos que la compu no lo sabe).<br>
 
 										  En esta etapa llamada pooling el contenido de la imagen comienza a tomar forma,
 
@@ -201,10 +201,9 @@
 											
 									   </p>
 
-									   En la imagen podemos ver señalado en color aquellas casillas en las que el proceso de convolucion nos arrojo el valor mas alto, la tecnica de max-pooling 
-									   consiste en revisar cada celda obtenida como resultado del proceso de convolucion y encontrar aquellas con el valor maximo con la esperanza de que tal vez
-									   en esa zona se encuentre un borde vertical (segun el filtro que se aplique) entre mas alto el valor es mas probable que se encuentre el rasgo deseado.
-									   El proceso de Max-pooling reduce la dimension de la imagen mediante la reduccion del numero de pixeles de la imagen original. 
+									 En la imagen podemos ver señalado con colores rosa y azul aquellas casillas en las que el proceso de convolución nos arrojó el valor más alto de cada región, por eso es llamada max- pooling , podría hacerse también sacando el promedio pero eso implica más operaciones que no vale la pena realizar cuando extraer el valor máximo ha demostrado ser suficientemente confiable.
+									 Como podemos observar el filtro de max-pooling revisa la imagen resultante de la convolución basándose en los parámetros que se establecieron (filtro 3x3, stride =3) guardando en la nueva imagen los valores (6,7,6,7) con la esperanza de que tal vez
+									 en esa zona se encuentre un borde vertical (según el filtro que se aplique) entre más alto el valor es más probable que se encuentre el rasgo deseado.
 										 <br>
 										 
 										Como se puede apreciar debido a las operaciones las dimensiones de la imagen son afectadas originalmente la imagen de la lupe comenzo como deb 8 px de ancho 
