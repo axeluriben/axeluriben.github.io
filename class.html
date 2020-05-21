@@ -182,17 +182,16 @@
 										 
 										   <h3>Pooling</h3>
 										   										   
-										  Después de haber aplicado la técnica de convolución sobre la imagen de la Lupe, obtenemos como resultado una imagen de (6x6), es la misma imagen de la Lupe solo que con menor resolución. Hasta este punto aún no sabemos que es lo que hay en la imagen. 
-										  (nosotros obviamente si lo sabemos, pero digamos que la compu no)<br>
+										  Después de haber aplicado la técnica de convolución sobre la imagen de la Lupe, obtenemos como resultado una imagen de (6x6), es la misma imagen de la Lupe solo que con menor resolución. Hasta este punto aún no sabemos que es lo que hay en la imagen
+										  (nosotros obviamente si lo sabemos, pero digamos que la compu no).<br>
 
 										  En esta etapa llamada pooling el contenido de la imagen comienza a tomar forma.
 
-										La operación de pooling permite analizar el contenido de la imagen generada por la convolución, lo hace analizando cada region, con la finalidad de extraer la información más representativa de la imagen.<br> Resulta ser de gran utilidad, ya que reduce la cantidad de datos y mantiene la información.<br><br>
+										La operación de pooling permite analizar el contenido de la imagen generada por la convolución, mediante el análisis cada región de la imagen, con la finalidad de extraer la información más representativa de esta.<br> Resulta ser una operación de gran utilidad, ya que reduce la cantidad de datos que se procesaran y mantiene la información.<br><br>
 
-										La forma en la que analiza las regiones es desplazándose hacia la derecha píxel por píxel (al paso se le llama "stride") justo como lo hacia el filtro en el proceso de convolucion, hasta terminar la imagen y después hacia abajo, la diferencia entre esta operacion y la convolucion es que  cuando se aplica pooling no se realiza ninguna operación aritmética sobre los píxeles, sino que extrae el valor máximo encontrado en cada región y lo almacena nuevamente en ooootra  imagen de menor resolución. <br>
+										La forma en la que analiza las regiones es aplicando un filtro llamado max pooling, el tamaño del filtro para el ejemplo de la Lupe sera de 3x3 y recorrerá la imagen de izquierda a derecha avanzando 3 pixeles por iteración y después hacia abajo hasta terminar la imagen (al avance se le llama "stride"), es similar al filtro en el proceso de convolución, la diferencia entre esta operación y la convolución es que cuando se aplica pooling no se realiza ninguna operación aritmética sobre los píxeles, sino que extrae el valor máximo encontrado en cada región con el tamaño de región que especificamos (3x3) y lo almacena nuevamente en ooootra imagen de menor resolución. <br>
 
 										Como nos podemos dar cuenta la imagen va perdiendo resolución conforme se aplican las operaciones, aunque esto no es necesariamente malo, es más fácil trabajar con la imagen reducida e implica menor procesamiento, lo malo es que llega un punto en el que la imagen ha perdido tanta resolución que ya no se le pueden seguir aplicando operaciones.
-
 
 
 										   <p class="alimagen">
