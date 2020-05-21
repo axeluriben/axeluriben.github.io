@@ -154,10 +154,11 @@
 										<h3> Convolución </h3>
 										<p>Ahora comienza lo bueno, lo de antes ya estaba bueno pero esto esta aún más. ¿tienen ustedes idea de como extraer las características de las imágenes?<br> ¿cómo va a saber la compu
 										que una la de la imagen es la pequeña Lupe y no un horrible tipo como el payaso broso por ejemplo o shrek?. Para los que no saben pues aquí les voy a mostrar de donde viene el nombre de: "Redes neuronales convolucionales" <br>
-										como ya les había dicho la computadora lo que ve son números y entre todos los números debemos encontrar la manera de identificar ciertos rasgos que dependen más que nada de lo que nosotros deseemos clasificar, ya sea números, letras, personas o cosas.
+										como ya les había dicho la computadora lo que ve son números y entre todos los números debemos encontrar la manera de identificar ciertos rasgos que dependen más que nada de lo que nosotros deseamos clasificar, la operacion 
+										de convolucion es importante ya que prepara la imagen para el siguiente proceso que es el pooling.
 										<br>
 										   
-										 El proceso de convolución consiste en aplicar un filtro a la imagen el filtro recorre toda la imagen con la intencion de ver que es lo que contiene y donde se encuentra.
+										 El proceso de convolución consiste en aplicar un filtro a la imagen el filtro recorre toda la imagen con la intencion de ver que es lo que contiene y donde se encuentra aunque por si solo no podria darse cuenta.
 										¿Que pelada no? primero que nada un filtro es básicamente un detector de rasgos o características, seria como decir "aquí está la foto de la Lupe algoritmo,  identifícame todas las líneas verticales en la imagen pero para ayer..."
 										y pues el algoritmo todo estresado tiene que recorrer toda la imagen en busca de las lineas que le pediste.
 
@@ -167,6 +168,7 @@
 												<img src="images/filt.jpg" alt="neo" align="center" >
 										   </p>
 
+										  
 										  En la imagen superior podemos ver la representación del proceso de convolución, donde en el lado izquierdo tenemos los valores de intensidad de la imagen que conforma a la pequeña Lupe, en el centro el filtro que detecta en la imagen
 										  lineas verticales, ese filtro recorrerá píxel por píxel toda la imagen como lo muestra la flecha roja, primero hacia la derecha y después hacia abajo. Mientras la recorre realiza una serie de operaciones cuyo resultado es almacenado en una matriz que es la misma imagen solo que ahora con menos píxeles (6x6), 
 										  digamos que es el costo del proceso, cada vez que se le aplican filtros la imagen pierde resolución.
@@ -176,12 +178,18 @@
 												<img src="images/convu3.gif" alt="ss" align="center" >
 										   </p>
 										   <p align="center"><i>      La figura superior muestra como recorre el filtro (representado en color rojo) la imagen (color verde)</i> </p><br><br>
-										   <h3>Pooling</h3>
+										   
+										  <h3>Pooling</h3>
 
-										   Despues de haber aplicado la tecnica de convolucion en la imagen de la lupe obtenemos como resultado la matrix de 6px de ancho por 6px de ancho 
-										   que en realidad es otra interpretacion de la misma imagen de la lupe, y lo que nos muestra es todas aquellas areas en las que es posible que 
-										   exista una linea vertical, ya que nuestro filtro era para eso para detectar bordes verticales. 
-										   no lo dice como "hey aqui estan las lineas mira" mas bien es algo como lo siguiente:<br><br>
+										   
+										   
+										   Después de haber aplicado la técnica de convolución sobre la imagen de la Lupe, obtenemos como resultado la matriz de 6px de ancho por 6px de alto, es la misma imagen de la Lupe solo que con menor resolución, pero aun no sabemos que es lo que hay en la imagen, solo obtuvimos otra después de aplicar el filtro.<br>
+										   Es en esta etapa llamada pooling es donde el contenido de la imagen comienza a tomar forma.
+										   La operación de pooling permite analizar el contenido de la imagen generada mediante la convolución por regiones, con la finalidad de extraer la información más representativa de las mismas. Resulta ser de gran utilidad, ya que reduce la cantidad de datos y mantiene la información.<br>
+									           Esto lo hace recorriendo la imagen tal como lo hacía el filtro, desplazándose hacia la derecha de píxel en píxel (al paso se le llama "stride") hasta terminar la imagen y después hacia abajo, solo que a diferencia de la convolución no realiza operación aritmética sobre los píxeles, sino que extrae el valor máximo encontrado en cada región y lo almacena en otra imagen de menor resolución. <br>
+
+									           Otra vez lo mismo, como nos podemos dar cuenta la imagen va perdiendo resolución conforme se aplican las operaciones, aunque esto no es necesariamente malo, es más fácil trabajar con la imagen reducida e implica menor procesamiento, lo malo es que llega un punto en el que la imagen ha perdido tanta resolución que ya no se le pueden seguir aplicando operaciones.<br><br>
+
 
 
 										   <p class="alimagen">
