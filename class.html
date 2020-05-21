@@ -153,24 +153,23 @@
 										
 										<h3> Convolución </h3>
 										<p>Ahora comienza lo bueno, lo de antes ya estaba bueno pero esto esta aún más. ¿tienen ustedes idea de como extraer las características de las imágenes?<br> ¿cómo va a saber la compu
-										que la imagen es  de la pequeña Lupe y no un carro  o una bicicleta?. Para los que no saben pues aquí les voy a mostrar de donde viene el nombre de: "Redes neuronales convolucionales". <br>
-										como ya les había dicho la computadora lo que ve son números y entre todos los números debemos encontrar la manera de identificar ciertos rasgos que dependen más que nada de lo que nosotros deseamos clasificar, ya sea números, letras, personas o cosas.<br><br>
-
+										que una la de la imagen es la pequeña Lupe y no un horrible tipo como el payaso broso por ejemplo o shrek?. Para los que no saben pues aquí les voy a mostrar de donde viene el nombre de: "Redes neuronales convolucionales" <br>
+										como ya les había dicho la computadora lo que ve son números y entre todos los números debemos encontrar la manera de identificar ciertos rasgos que dependen más que nada de lo que nosotros deseemos clasificar, ya sea números, letras, personas o cosas.
+										<br>
 										   
-										El proceso de convolución consiste en aplicar varios filtros a la imagen, en el caso de la Lupe solo usaremos uno para ilustrar el proceso. El filtro recorrerá toda la imagen con la intención de ver que es lo que contiene y donde se encuentra.
-										¿Qué pelada no?, primero que nada un filtro es básicamente un detector de rasgos o características, pueden ser sencillos como filtros detectores de líneas verticales u horizontales hasta los más complejos que son capaces de detectar patrones más complicados, seria como decir: "aquí está la foto de la Lupe algoritmo, ¡identifícame todas las formas en la imagen pero para ayer!"
-										y pues el algoritmo todo estresado tiene que recorrer toda la imagen en busca de las lineas que le pediste.<br>
+										 El proceso de convolución consiste en aplicar un filtro a la imagen el filtro recorre toda la imagen con la intencion de ver que es lo que contiene y donde se encuentra.
+										¿Que pelada no? primero que nada un filtro es básicamente un detector de rasgos o características, seria como decir "aquí está la foto de la Lupe algoritmo,  identifícame todas las líneas verticales en la imagen pero para ayer..."
+										y pues el algoritmo todo estresado tiene que recorrer toda la imagen en busca de las lineas que le pediste.
 
-
+										  
 										   
 										   <p class="alimagen">
 												<img src="images/filt.jpg" alt="neo" align="center" >
 										   </p>
 
-										   En la imagen podemos ver la representacion del proceso de convolucion, donde tenemos del lado izquierdo la imagen de lapequeña lupé en el centro el filtro que detecta en la imagen
-										   lineas verticales y como resultado una matriz que es la imagen solo que ahora con menos pixeles (6x6) digamos que es el costo del proceso cada vez que se le aplican filtros la imagen se reduce 
-										   no se trata solo de recorrer la imagen al mismo tiempo se van haciendo una serie de operaciones cuyo resultado es almacenado en otra "matriz" que es en realidad
-										   de donde vamos a darnos cuenta si hay algo que nos interese en la imagen o no. <br><br>
+										  En la imagen podemos ver la representación del proceso de convolución, donde en el lado izquierdo tenemos los valores de intensidad de la imagen que conforma a la pequeña Lupe, en el centro el filtro que detecta en la imagen
+										  lineas verticales, ese filtro recorrerá píxel por píxel toda la imagen como lo muestra la flecha roja, primero hacia la derecha y después hacia abajo, mientras la recorre realiza una serie de operaciones cuyo resultado es almacenado en una matriz que es la imagen solo que ahora con menos píxeles (6x6), digamos que es el costo del proceso cada vez que se le aplican filtros la imagen pierde resolución.
+										  En esta nueva imagen es donde vamos a darnos cuenta si hay algo que nos interese (borde vertical) en la imagen o no. <br><br>
 
 
 										   <h3>Pooling</h3>
