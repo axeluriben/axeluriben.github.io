@@ -238,8 +238,12 @@
 									  
 
 
-									   Obviamente exagerando ya que solo hemos aplicado un filtro de reconocimiento de bordes verticales a la imagen de la lupe la imagen no quedara como el lado derecho
-									   digamos que aplicamos unos 10 filtros de deteccion a la imagen y como resultado despues del maxpooling obtenemos la siguiente imagen 
+									   La arquitectura fantasiosa de una sola capa con solo un filtro para detectar todos esos rasgos en la imagen, es evidentemente una simplificación 
+								           del tratamiento que se le da a la imagen antes de la "compu" como habia dicho anteriormente pueda saber que es lo que está viendo en la imagen, podría 
+								           decirse que hasta este momento no puede "ver" que hay, aunque haya detectado todos esos rasgos. Al igual que en los humanos necesita un cerebro que 
+								           discrimine objetos del mundo real y los clasifique según su conocimiento del entorno, para este caso el cerebro se lo brinda la arquitectura de la red neuronal.
+                                                                           la parte que "piensa" por decirlo así es aportada por el algoritmo de clasificación ya sea una regresión logística o un softmax , esa parte es fundamental 
+								           para que al fin pueda saber la compu que es lo que hay en la imagen.<br><br>
 
 
 									   <br><br>
