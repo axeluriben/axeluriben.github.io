@@ -261,14 +261,19 @@
 										<img src="images/lenet.jpg" alt="neo" align="center" >
 								  	    </p>
 								
-								        En la arquitectura de la imagen podemos ver la imagen de la Lupe entrando a la red neuronal para ser clasificada, en este ejemplo la resolución de la Lupe será de 32x32x1 
+								        En la arquitectura de la imagen podemos ver la imagen de la Lupe entrando a la red neuronal para ser clasificada, en este ejemplo la resolución de la Lupe es de 32x32x1 
 								        (blanco y negro), inmediatamente se le aplican 6 filtros detectores de rasgos de tamaño 5x5, con un avance de 1 píxel y como resultado de la convolución obtenemos un volumen 
 								        de 6 imágenes con resolución 28x28, a diferencia de la arquitectura marca ACME que creamos al inicio del blog donde usábamos solo un filtro detector de bordes verticales, 
 								        en este ejemplo la primera etapa utiliza 6 filtros detectores de rasgos elevando el número de operaciones y también el tiempo de procesamiento. 
 								
                                                                         A la nueva imagen de resolución 28x28 se le aplica la operación de max-pooling con un filtro de 2x2 y avance de 2 px obteniendo como resultado 6 nuevas imágenes de resolución 14x14x6.
                                                                         hasta este momento hemos llegado a la primera capa que como ven no es muy diferente a la del inicio en cuanto a estructura aunque si lo es con respecto al volumen de operaciones que se tienen que realizar.
-										   
+								        
+								En este punto hemos llegado a la primera capa que como ven no es muy diferente a la del inicio en cuanto a estructura aunque si lo es con respecto al volumen de operaciones que se tienen que realizar.
+
+								La segunda capa repite el procedimiento que les acabo de explicar, es decir aplica de nuevo las operaciones de convolución y max-pooling, pero en esta ocasión lo hace con diferentes volúmenes de filtros. 
+								por último la toda la información procesada por las etapas de convolución y max-pooling es enviada a la arquitectura de la red neuronal, que utiliza un softmax para determinar finalmente a que clase pertenece 
+								la imagen que se analizo. En el caso de la Lupe pues la clasificaría como persona.
 									   
 
 
