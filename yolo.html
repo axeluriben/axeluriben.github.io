@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Landed</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Layouts</a>
+								<ul>
+									<li><a href="left-sidebar.html">Left Sidebar</a></li>
+									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option 1</a></li>
+											<li><a href="#">Option 2</a></li>
+											<li><a href="#">Option 3</a></li>
+											<li><a href="#">Option 4</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="elements.html">Elements</a></li>
+							<li><a href="#" class="button primary">Sign Up</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Detección de objetos mediante redes neuronales</h2>
+							<p><em>"¿Quieres saber como ve un tesla? ¿Que objetos reconocen las computadoras? ¿no?...pues ushcale de aqui "</em></p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<a href="#" class="image fit"><img src="images/detection5.jpg" alt="" /></a>
+								<h3>Motivación </h3>
+									El area de vision por computadora se ha ido popularizando conforme avanza el desarrollo tecnologico, 
+									motivada principalmente por emular la vision humana.<br>
+									Conforme una persona se desarrolla aprende facilmente a detectar, clasificar objetos, colores y hasta predecir movimientos,
+									todo esto y mas lo hace sin sentir que el acto de visualisar requiera de toda su energia o que una gran complejidad este involucrada en el proceso.<br>
+									Pero la realidad es que el cerebro humano invierte de manera directa o indirecta aproximadamente la mitad del cerebro para hacer esto posible. 
+									En terminos digitales podria decirse que procesa alrededor de 60 imagenes por segundo, imagenes compuestas por puntos que en el mundo digital conoceriamos 
+									como pixeles.
+									Emular las actividades que para los humanos son triviales para una computadora siempre han representado un gran reto y el area de vision no es la exepcion
+									hoy en dia existen tecnicas  del area de matemáticas y computación creadas para simular el proceso de vision en computadoras y en ente trabajo se ilustrara una de las mas poderosas
+									que muestra como una computadora puede ver los objetos del mundo real.<br><br>
+						
+								<h3>Introducción </h3>
+									
+								<p>
+									El desarrollo de las redes neuronales ha generado grandes avances en el campo de vision por computadora de hecho
+									es particularmente interesante ya que a otras areas de las matematicas y ciencias de la computacion que se han centrado mas que nada en la creacion
+									y modelado de objetos 3D, Las redes neuronales llaman la atencion por que no se trata solamente del acto de observar, si no que 
+									al igual que los humanos el acto de observar pasa a ser una actividad secundaria podria decirse que la vision es utilizada en humanos
+									y computadoras como una  fuente de informacion bastante valiosa para poder realizar una tarea primaria.<br><br>
+
+									El proposito de este blog es mostrar mediante aplicaciones bastante intersantes el funcionamiento de las redes neuronales convolucionales
+									en este caso su apicacion en una de las actividades mas dificiles e interesantes del area: deteccion de objetos.<br>
+									entonces vamos a construir un algoritmo como el que utilizan los autos para detectar objetos y para lograrlo se abordaran los aspectos mas reelevantes del tema:
+									<li>localizacion y clasificación de objetos </li>
+									<li>Establecer  referencias</li>
+									<li>Deteccion de objetos</li>
+									<li>El algoritmo YOLO (you only live once)</li>
+									<li>jaa los engañe es: you only look once</li>
+									
+								
+								</p>
+								<h3></h3>
+								
+								<ul>
+									<hr>	
+									<li><h3>localización y clasificación de objetos</h3></li>
+
+
+									<li><h3>localización y clasificación de objetos</h3></li>
+										<p>En el mundo real el acto de localizar un objeto implica tambien hacer una disticion de este, es decir debemos saber que es el objeto que queremos
+											localizar, ya sea un auto en la carretera, una persona, animal o cosa. Y una vez clasificado localizarlo.
+											En el mundo digital no necesariamente deberia funcionar de esa manera pero se ha hecho asi para que funcione en deterinados entornos donde es importante
+											que clasifique y lo funciona de manera similar a encontrar un punto en el plano cartesiano imaginense que el cuadro rojo es el plano cartesiano y el 
+											circulo azul es la posicion de la persona en el plano 
+
+											<p class="alimagen">
+												<img src="images/local3.jpg" alt="neo" align="center" >
+											</p>
+
+											En la imagen de la izquierda podemos ver una primera version que corresponde a clasficar un objeto que aparece en la imagen el proceso de clasificación
+											etiqueta el objeto que reconoce en la pantalla basada en su basa de conocimientos que para nosostros los humanos serian aquellos objetos que a lo largo de su vida  
+											ha aprendido a reconocer y se encuentran almacenados en su cerebro, para la computadora seria un conjunto de entrenamiento con diferentes objetos que el algoritmo aprende a reconocer
+											para nuestro algoritmo reconoceremos 4 : autos, personas, motocicletas y el fondo (entorno que nos rodea pueden ser edificios arboles cielo etc.) 
+											los humanos dificilmente pueden evitar reconocer ciertos objetos cuando realizan una actividad pero las maquinas solo reconocen los que nosotros le hemos programado para reconocer
+											aunque para esta actividad no es necesario que reconozca nada mas.
+
+											
+											y del lado derecho una vez clasificado el objeto sigue la etapa de localizarlo en la pantalla. para localizar se debe establecer una referencia en el objeto
+											con al cuadro de la imagen. como se puede observar en la persona aparece un circulo azul con coordenadas que por el momento llamaremos (bx,by) correspondientes al centro de la persona 
+											con respecto al rectangulo rojo que la encierra.
+											una forma para que la gente que no 
+											esto es muy importante por que nos dira exactamente donde se encuentra una vez que la reconozca
+											hasta este momento todo parece muy facil y facil de digerir pero para poder llegar a esos resultados se debe atravesar un proceso muy complejo
+
+											cada una de las etapas es importante y esta estructurada de manera diferente por lo que el siguiente paso es formalizar lo que acabo de simplificar 
+											con imagenes.
+											
+											primero el tema de la clasificación de objetos.
+
+											basicamente para clasificar objetos la estrucutra de la red neuronal es de la siguiente manera:
+
+
+
+
+
+
+											
+										</p>
+
+
+										</p>
+										<hr>
+									<li><h3>De aquí pal' real </h3></li>
+										<p>Todo lo que se encuentre debajo de esa línea gris que acabo de dibujar será pura explicación dura y directa de algoritmos de aprendizaje, de manera que si no estas preparado para ver matemáticas de las que llevan letras del 
+											alfabeto griego y números en el mismo renglón.<a href="https://www.youtube.com/watch?v=I67cgXr6L6o&list=PLrCxuarfkw8qHUpp1HNz6N84XEAZzjIvn" > Picale a este enlace y te Redirigirá  a un playlist de shakira cuando estaba gordita y cantaba
+											bien (pies descalzos y todas esas)</a>
+										</p>
+									<style>
+										.alimagen{
+										   text-align: center;
+										   height = "21";
+  										   width = "21";
+										}
+										}
+									</style>
+									<p class="alimagen">
+										<img src="images/neo2.png" alt="neo" align="center" >
+									</p>
+										<ul>
+											<li><a href="https://nbviewer.jupyter.org/github/axeluriben/axeluriben.github.io/blob/95272c4ac8f30bd177a170cde664663f9f7619fb/regtree.ipynb" >Aprendizaje supervisado</a></li>
+												<ul>
+													<li>Regresión lineal</li>
+												</ul>
+											
+
+										</ul>
+									
+								
+								</ul>
+							</section>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
