@@ -161,19 +161,33 @@
 									En la imagen, la arquitectura descrita por la publicación de Joseph Raymond y compañía, donde observamos que a pesar de ser bastante poderosa no deja de ser sencilla para su interpretación (la organización de las capas conv-max es parecida a la de 
 									la explicación sobre clasificación que les puse en la publicación pasada)<br><br>
 									
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Código</h4>
+									<blockquote>El código siguiente es una ilustración sobre la definición de las capas en este tipo de algoritmos</blockquote>
 
 									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+									<pre><code>
+									
+									 # Capa 1
+        x = Conv2D(32, (3,3), strides=(1,1), padding='same', name='conv_1', use_bias=False)(imagen_entrada)
+        x = BatchNormalization(name='norm_1')(x)
+        x = LeakyReLU(alpha=0.1)(x)
+        x = MaxPooling2D(pool_size=(2, 2))(x)
 
-									while (!deck.isInOrder()) {
-									    print 'Iteration ' + i;
-									    deck.shuffle();
-									    i++;
-									}
+        # Capa 2
+        x = Conv2D(64, (3,3), strides=(1,1), padding='same', name='conv_2', use_bias=False)(x)
+        x = BatchNormalization(name='norm_2')(x)
+        x = LeakyReLU(alpha=0.1)(x)
+        x = MaxPooling2D(pool_size=(2, 2))(x)
 
-									print 'It took ' + i + ' iterations to sort the deck.';
+        # Capa 3
+        x = Conv2D(128, (3,3), strides=(1,1), padding='same', name='conv_3', use_bias=False)(x)
+        x = BatchNormalization(name='norm_3')(x)
+        x = LeakyReLU(alpha=0.1)(x)
+
+        # Capa 4
+        x = Conv2D(64, (1,1), strides=(1,1), padding='same', name='conv_4', use_bias=False)(x)
+        x = BatchNormalization(name='norm_4')(x)
+        x = LeakyReLU(alpha=0.1)(x)
 									</code></pre>
 									
 									
