@@ -162,12 +162,17 @@
 									la explicación sobre clasificación que les puse en la publicación pasada)<br><br>
 									
 									<h4>Código</h4>
-									<blockquote>El código siguiente es una ilustración sobre la definición de las capas en este tipo de algoritmos</blockquote>
+									<blockquote>El código siguiente es una ilustración sobre la definición de las capas en este tipo de algoritmos, donde podrian rescatar 
+									la definicion.<br>
+									Donde podrían rescatar la definición del tamaño de filtro para la convolución, el número de filtros que se aplican, el tamaño con el que avanzara el filtro,
+									si contiene padding o no, el nombre de la capa, la función de activación y el tamaño del filtro de max pooling. (no son todas las capas es solo un ejemplo de algunas)
+									
+									</blockquote>
 
 									<h4>Preformatted</h4>
 									<pre><code>
 									
-									 # Capa 1
+	# Capa 1
         x = Conv2D(32, (3,3), strides=(1,1), padding='same', name='conv_1', use_bias=False)(imagen_entrada)
         x = BatchNormalization(name='norm_1')(x)
         x = LeakyReLU(alpha=0.1)(x)
