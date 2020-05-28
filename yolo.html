@@ -104,9 +104,9 @@
 											</p>
 					
 										Como podrán ver, en la imagen he representado la arquitectura de una red neuronal convolucional para clasificar objetos de manera simplificada, donde podemos ver que el algoritmo 
-										clasifica 4 clases de objetos: automóviles, personas, gatos y perros, Pero que como les dije antes no solo queremos clasificar también es importante localizar.
+										clasifica 4 clases de objetos: automóviles, personas, gatos y perros. Como les dije antes no solo queremos clasificar también es importante localizar.
 										Para esta tarea se han añadido 4 nuevas variables que se encargaran de localizar el objeto clasificado.<br> 
-					                                        Para lograrlo es necesario cambiar nuestra red neuronal  es por eso que se han introducido esas nuevas variables, serán las responsables de señalar mediante un rectángulo  la posición el objeto clasificado.	
+					                                        Estas serán las responsables de señalar mediante un rectángulo  la posición el objeto.	
 										<br><br>
 
 										<p class="alimagen">
@@ -117,8 +117,10 @@
 										en donde vemos también a que se refieren cada uno de los nuevos parámetros que se han introducido. En resumen al ingresar la imagen a nuestra red neuronal no solo como 
 										resultado nos arrojara la clase del objeto al que pertenece la imagen también nos dará los valores de bx,by,bh,by.<br>
 										Para lograr todo esto que acabo de decir, se necesitara un algoritmo muy poderoso que funciona de maravilla en tiempo real, llamado "YOLO" 
-										durante el resto de este documento veremos su funcionamiento y aplicación en diferentes objetos.<br>
+										durante el resto de este documento veremos su funcionamiento y aplicación en diferentes objetos.<br><br>
 									
+										<h3>Nueva salida</h3>
+										
 										Por último es necesario definir nuestra etiqueta (y) como un vector que almacenara toda la información de las nuevas variables, (bx,by,bh,bw,) y la clase a la que pertenece el objeto 
 									        (Automóvil, persona, gato, perro).<br><br>
 									
