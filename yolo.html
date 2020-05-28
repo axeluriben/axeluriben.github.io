@@ -134,8 +134,15 @@
 										Uno de los problemas que les toco abordar durante el desarrollo fue la sobre posición de objetos en una misma imagen, para lo que desarrollaron una técnica llamada "anchor boxes".
 										Que consiste en verificar sobre la misma celda el número de objetos y para cada uno guardar en el vector de salida su posición, podría verse como tener dos plantillas una para objetos horizontales digamos un
 									        auto (a lo largo) y otra para verticales (una persona parada) y si en la misma imagen detecta dos objetos en la plantilla para verticales guarda a la persona y en la horizontal guarda el auto, pero ya no sería 
-									        un vector como el de la imagen superior de 8 renglones, ahora serian 16 si tenemos definidas 2 cajas o 24 si tenemos definidas 3, etc.
+									        un vector como el de la imagen superior de 8 renglones, ahora serian 16 si tenemos definidas 2 cajas o 24 si tenemos definidas 3, etc.<br><br>
+									
+									
 									<h3>Arquitectura</h3>
+									
+									El éxito de yolo se debe principalmente a la forma en la que procesa la imagen, cuando recibe una entrada yolo proyecta una rejilla sobre esta, en el ejemplo que les pondré la rejilla tendrá tamaño 3x3, en realidad
+									nunca son de ese tamaño pero resulta sencillo explicarlo de esa manera. Como resultado de la proyección obtenemos 9 rejillas es entonces cuando entra nuestro algoritmo de clasificación y detección para cada una de ellas, 
+									se verifica si contiene una imagen y se le asigna el vector etiqueta con las 8 variables a cada una de las celdas, en las que el vector para cada una puede ser diferente, ya que en algunas va a detectar un objeto marcando
+									con 1 cuando es así, y en otras no encontrara nada por lo que marcara con 0 dichas etiquetas.
 									
 									<p class="alimagen">
 													<img src="images/miarqui.jpg" alt="neo" align="center" >
