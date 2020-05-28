@@ -130,6 +130,11 @@
 													<img src="images/ylabel.jpg" alt="neo" align="center" >
 										</p>
 									
+										El algoritmo yolo trajo consigo una serie de mejoras y medicaciones en la arquitectura de red, que aunque podría decirse que son algo sutiles, son también increíblemente eficientes para el análisis de imágenes.
+										Uno de los problemas que les toco abordar durante el desarrollo fue la sobre posición de objetos en una misma imagen, para lo que desarrollaron una técnica llamada "anchor boxes".
+										Que consiste en verificar sobre la misma celda el número de objetos y para cada uno guardar en el vector de salida su posición, podría verse como tener dos plantillas una para objetos horizontales digamos un
+									        auto (a lo largo) y otra para verticales (una persona parada) y si en la misma imagen detecta dos objetos en la plantilla para verticales guarda a la persona y en la horizontal guarda el auto, pero ya no sería 
+									        un vector como el de la imagen superior de 8 renglones, ahora serian 16 si tenemos definidas 2 cajas o 24 si tenemos definidas 3, etc.
 									<h3>Arquitectura</h3>
 									
 									<p class="alimagen">
