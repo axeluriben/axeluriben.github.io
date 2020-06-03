@@ -21,10 +21,10 @@
 
 		<script type="module">
 
-			import * as THREE from '/images/three.module.js';
+			import * as THREE from './images/three.module.js';
 
 			import { OrbitControls } from './jsm/controls/OrbitControls.js';
-			import { AMFLoader } from '/images/AMFLoader.js';
+			import { AMFLoader } from './images/AMFLoader.js';
 
 			var camera, scene, renderer;
 
@@ -58,7 +58,7 @@
 				document.body.appendChild( renderer.domElement );
 
 				var loader = new AMFLoader();
-				loader.load( '/images/rook.amf', function ( amfobject ) {
+				loader.load( './images/rook.amf', function ( amfobject ) {
 
 					scene.add( amfobject );
 					render();
