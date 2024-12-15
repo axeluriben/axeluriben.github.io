@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Landed</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Layouts</a>
+								<ul>
+									<li><a href="left-sidebar.html">Left Sidebar</a></li>
+									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option 1</a></li>
+											<li><a href="#">Option 2</a></li>
+											<li><a href="#">Option 3</a></li>
+											<li><a href="#">Option 4</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="elements.html">Elements</a></li>
+							<li><a href="#" class="button primary">Sign Up</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Detección de objetos mediante redes neuronales</h2>
+							<p><em>"¿Quieres saber como ve un tesla?, ¿Que objetos reconocen las computadoras?, ¿no?. Que importa, de todas formas te lo dire"</em></p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<a href="#" class="image fit"><img src="images/detection5.jpg" alt="" /></a>
+								<h3>Motivación </h3>
+									El área de visión por computadora se ha ido popularizando conforme avanza el desarrollo tecnológico, motivada principalmente por emular la visión humana.
+									Conforme una persona se desarrolla aprende fácilmente a detectar, clasificar objetos, colores y hasta predecir movimientos, todo esto y más lo hace sin 
+								        sentir que el acto de visualizar requiera de toda su energía o que una gran complejidad esté involucrada en el proceso.<br>
+									La realidad es que el cerebro humano invierte de manera directa o indirecta aproximadamente la mitad del cerebro para hacer esto posible. 
+								        En términos digitales podría decirse que procesa alrededor de 60 imágenes por segundo, imágenes compuestas por puntos que en el mundo digital conoceríamos
+								        como pixeles. Emular las actividades que para los humanos son triviales para una computadora siempre han representado un gran reto y el área de visión no es la 
+								        excepción hoy en día existen técnicas del área de matemáticas y computación creadas para simular el proceso de visión en computadoras y en ente trabajo se ilustrará
+								        una de las más poderosas que muestra como una computadora puede ver los objetos del mundo real.
+									<br><br>
+						
+								<h3>Introducción </h3>
+									
+								<p>
+								        Llego el momento de subir el nivel, en la publicación que subí llamada "¿cómo ven las computadoras?" les comentaba sobre todo el procesamiento que se lleva clasificar una imagen y tal, además mostraba un ejemplo sobre la arquitectura de la red neuronal
+									que permitía clasificar objetos en una fotografía,en esta ocasión les mostrare una aplicación real que hará que se les pongan los pelos de punta y veran la película de terminator
+									como algo un poco más real. (terminator 2 que es la más chila ;) ) El proyecto se tratará sobre una arquitectura que permite como lo dice el título localizar y clasificar objetos en el
+									mundo real, les resultara muy entretenidio por que mostraré algunos ejemplos.
+									
+								
+								</p>
+								
+								<h3>La red neuronal YOLO (you only look once)</h3>
+									YOLO es un sistema encargado de detectar diferentes objetos en imágenes, en su momento causo una gran revolución en el campo de las redes neuronales, 
+									gracias al planteamiento de una arquitectura que funciona mucho mejor que otras, logrando excelentes resultados. El problema principal era que los sistemas que 
+									existían en ese momento utilizaban técnicas que demandaban bastante poder de procesamiento como por ejemplo "sliding windows" por lo que resultaban ser bastante ineficientes y no conseguían llegar a una análisis en tiempo real,
+									la esperanza de estos sistemas era que las GPU's (unidades de procesamiento grafico) mejorarían y el tiempo de análisis mejoraría bastante .es en ese momento cuando llega
+									Joseph raymond y compañia, como cuando le estaban partiendo en su madre al octágon y llegaba la parka a tirarle un paro para acabar con todo eso.
+									<br><br>
+								
+								<ul>
+									<hr>	
+
+									 <h3>Introducción de nuevos elementos</h3>
+										<p>
+
+										Para comprender el funcionamiento de la arquitectura de red neuronal YOLO,  debo introducir nuevos elementos ya que  
+										ahora la tarea no es solo clasificar el objeto, el algoritmo también debe decirnos donde se encuentra el objeto encerrando su posición en un rectángulo es decir,
+										clasificar, localizar y señalar el objeto.<br>
+										Les presentaré nuevas variables que formaran parte de la arquitectura, estas variables son importantes, ya que están directamente relacionadas con la posición 
+										del objeto que detectemos en la imagen.
+											
+											
+											
+											<p class="alimagen">
+													<img src="images/nuevos.jpg" alt="neo" align="center" >
+											</p>
+					
+										Como podrán ver, en la imagen he representado la arquitectura de una red neuronal convolucional para clasificar objetos de manera simplificada, donde podemos ver que el algoritmo 
+										clasifica 4 clases de objetos: automóviles, personas, gatos y perros. Como les dije antes no solo queremos clasificar también es importante localizar.
+										Para esta tarea se han añadido 4 nuevas variables que se encargaran de localizar el objeto clasificado.<br> 
+					                                        Estas serán las responsables de señalar mediante un rectángulo  la posición el objeto.	
+										<br><br>
+
+										<p class="alimagen">
+													<img src="images/diferencia.jpg" alt="neo" align="center" >
+										</p>
+
+										Con la imagen del "cybertruck" pretendo resaltar la diferencia de la red neuronal convencional de la clasificación y la nueva en la que además de clasificar localiza, 
+										en donde vemos también a que se refieren cada uno de los nuevos parámetros que se han introducido. En resumen al ingresar la imagen a nuestra red neuronal no solo como 
+										resultado nos arrojara la clase del objeto al que pertenece la imagen también nos dará los valores de bx,by,bh,by.<br>
+										Para lograr todo esto que acabo de decir, se necesitara un algoritmo muy poderoso que funciona de maravilla en tiempo real, llamado "YOLO" 
+										durante el resto de este documento veremos su funcionamiento y aplicación en diferentes objetos.<br><br>
+									
+										<h3>Nueva salida</h3>
+										
+										En el ejemplo podemos observar el formato de la etiqueta junto con los valores que lleva almacenados, en esta ocasión  la etiqueta muestra en la imagen un caso en particular: 
+									        cuando se ha encontrado un objeto. El objeto encontrado es el "cybertruck" y el nuevo formato de salida a diferencia del proceso de clasificación convencional es este vector 
+									        de tamaño 8 en el que se observan las clases, las coordenadas de la posición- dimensión de la caja y un indicador que marca 1 en el caso en el que se encontró un objeto en la imagen.
+<br><br>
+									
+										<p class="alimagen">
+													<img src="images/ylabel.jpg" alt="neo" align="center" >
+										</p>
+									
+										El algoritmo yolo trajo consigo una serie de mejoras y medicaciones en la arquitectura de red, que aunque podría decirse que son algo sutiles, son también increíblemente eficientes para el análisis de imágenes.
+										Uno de los problemas que les toco abordar durante el desarrollo fue la sobre posición de objetos en una misma imagen, para lo que desarrollaron una técnica llamada "anchor boxes".
+										Que consiste en verificar sobre la misma celda el número de objetos y para cada uno guardar en el vector de salida su posición, podría verse como tener dos plantillas una para objetos horizontales digamos un
+									        auto (a lo largo) y otra para verticales (una persona parada) y si en la misma imagen detecta dos objetos en la plantilla para verticales guarda a la persona y en la horizontal guarda el auto, pero ya no sería 
+									        un vector como el de la imagen superior de 8 renglones, ahora serian 16 si tenemos definidas 2 cajas o 24 si tenemos definidas 3, etc.<br><br>
+									
+									
+									<h3>Arquitectura</h3>
+									
+									El éxito de yolo se debe principalmente a la forma en la que procesa la imagen, cuando recibe una entrada yolo proyecta una rejilla sobre esta, en el ejemplo que les pondré la rejilla tendrá tamaño 3x3, en realidad
+									nunca son de ese tamaño pero resulta sencillo explicarlo de esa manera. Como resultado de la proyección obtenemos 9 rejillas es entonces cuando entra nuestro algoritmo de clasificación y detección para cada una de ellas, 
+									se verifica si contiene una imagen y se le asigna el vector etiqueta con las 8 variables a cada una de las celdas, en las que el vector para cada una puede ser diferente, ya que en algunas va a detectar un objeto marcando
+									con 1 cuando es así, y en otras no encontrara nada por lo que marcara con 0 dichas etiquetas.<br><br>
+									
+									<p class="alimagen">
+													<img src="images/miarqui.jpg" alt="neo" align="center" >
+										</p>
+									
+									
+									Debo aclarar que el tamaño del vector que se le asigna a cada una de las celdas va a depender del número de clases que se tengan, en nuestro caso son solo 3 pero pueden ser más, y del número de "anchor boxes" que se utilicen (en este caso solo 1).
+									En la parte inferior de la imagen podemos ver un pequeño ejemplo de la arquitectura que yolo plantea, donde podemos ver que la salida lo que les comentaba sobre el vector etiqueta la salida será un volumen de 3x3x8.
+									El entrenamiento se realiza través del proceso de convolución (conv- maxpool) donde al final llegamos a nuestro volumen de la rejilla. La gran ventaja de esta arquitectura es que el resultado nos da bastante precisión en los 
+									bounding boxes (las cajas que encierran al objeto) además claro, decirnos si hay algo y que es lo que se identificó.<br><br>
+									
+									<p class="alimagen">
+													<img src="images/yoloarqu.jpg" alt="neo" align="center" >
+									</p>
+									
+									En la imagen, la arquitectura descrita por la publicación de Joseph Raymond y compañía, donde observamos que a pesar de ser bastante poderosa no deja de ser sencilla para su interpretación (la organización de las capas conv-max es parecida a la de 
+									la explicación sobre clasificación que les puse en la publicación pasada)<br><br>
+									
+									<h4>Código</h4>
+									<blockquote>El código siguiente es una ilustración sobre la definición de las capas en este tipo de algoritmos.<br>
+									Donde podrían rescatar la definición del tamaño de filtro para la convolución, el número de filtros que se aplican, el tamaño con el que avanzara el filtro,
+									si contiene padding o no, el nombre de la capa, la función de activación y el tamaño del filtro de max pooling. (no son todas las capas es solo un ejemplo de algunas)
+									
+									</blockquote>
+
+									<h4>Capas</h4>
+									<pre><code>
+									
+	# Capa 1
+        x = Conv2D(32, (3,3), strides=(1,1), padding='same', name='conv_1', use_bias=False)(imagen_entrada)
+        x = BatchNormalization(name='norm_1')(x)
+        x = LeakyReLU(alpha=0.1)(x)
+        x = MaxPooling2D(pool_size=(2, 2))(x)
+
+        # Capa 2
+        x = Conv2D(64, (3,3), strides=(1,1), padding='same', name='conv_2', use_bias=False)(x)
+        x = BatchNormalization(name='norm_2')(x)
+        x = LeakyReLU(alpha=0.1)(x)
+        x = MaxPooling2D(pool_size=(2, 2))(x)
+
+        # Capa 3
+        x = Conv2D(128, (3,3), strides=(1,1), padding='same', name='conv_3', use_bias=False)(x)
+        x = BatchNormalization(name='norm_3')(x)
+        x = LeakyReLU(alpha=0.1)(x)
+
+        # Capa 4
+        x = Conv2D(64, (1,1), strides=(1,1), padding='same', name='conv_4', use_bias=False)(x)
+        x = BatchNormalization(name='norm_4')(x)
+        x = LeakyReLU(alpha=0.1)(x)
+									</code></pre>
+									
+									
+									
+									
+									
+									
+									<h3>Resultados</h3>
+									Estos son algunos de los resultados en video de la aplicación de yolo, algo interesante es que podemos nosotros hacer una modificación para que el algoritmo detecte los objetos que nosotros queramos, 
+									podría ser una gran base para desarrollar un proyecto para una empresa como en el aspecto de vigilancia o en la industria donde se debe controlar cierto resultado de un proceso (que de hecho esa es mi tirada, 
+									cuando tenga algo de eso lo subiré por aquí).<br><br>
+									
+										<p class="alimagen">
+													<img src="images/yoloyo.gif" alt="neo" align="center" >
+										</p>
+											<br>
+											
+										<p class="alimagen">
+													<img src="images/polis.gif" alt="neo" align="center" >
+										</p>
+									
+									
+										<p class="alimagen">
+													<img src="images/pelea.gif" alt="neo" align="center" >
+										</p>
+									
+									
+									
+
+
+
+
+
+											
+										</p>
+
+
+										</p>
+										<hr>
+									
+									<style>
+										.alimagen{
+										   text-align: center;
+										   height = "21";
+  										   width = "21";
+										}
+										}
+									</style>
+									
+										
+								
+								</ul>
+							</section>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
