@@ -56,28 +56,40 @@
 							<section id="content">
 								<a href="#" class="image fit"><img src="images/chofondo.png" alt="" /></a>
 								<h3>Motivación </h3>
-									En el ámbito técnico, realizar cambios de configuración es una actividad que debería demandar solamente la atención del técnico que la realiza, pero para lograr eso es necesario primeramente información relevante, actualizada, confiable, completa y objetiva.<br> <br>
-									En muchas empresas, la calidad de la información sigue siendo un desafío, a pesar de ser crucial para el éxito de cualquier proyecto. La falta de datos claros y precisos puede influir directamente en los resultados.<br>
+									En el ámbito técnico, realizar cambios de configuración es una actividad que debería demandar solamente la atención del técnico que la realiza, para lograr eso es necesario primeramente información relevante, actualizada, confiable, completa y objetiva.<br> <br>
+									En muchas empresas, la calidad de la información sigue siendo un desafío, a pesar de ser crucial para el éxito de cualquier proyecto. La falta de datos claros y precisos puede influir directamente en los resultados.<br><br>
 									Este sistema surge de una necesidad personal, basada en mi experiencia laboral al identificar las fallas comunes en estas actividades. Además, integra conocimientos sobre sistemas de información, herramientas clave en las empresas actuales, que no solo permiten cumplir objetivos, sino también proyectarse estratégicamente hacia el futuro para destacar frente a la competencia.
 									<br><br>
 						
 								<h3>Introducción </h3>
 									
 								<p>
-								        Llego el momento de subir el nivel, en la publicación que subí llamada "¿cómo ven las computadoras?" les comentaba sobre todo el procesamiento que se lleva clasificar una imagen y tal, además mostraba un ejemplo sobre la arquitectura de la red neuronal
-									que permitía clasificar objetos en una fotografía,en esta ocasión les mostrare una aplicación real que hará que se les pongan los pelos de punta y veran la película de terminator
-									como algo un poco más real. (terminator 2 que es la más chila ;) ) El proyecto se tratará sobre una arquitectura que permite como lo dice el título localizar y clasificar objetos en el
-									mundo real, les resultara muy entretenidio por que mostraré algunos ejemplos.
+								        La aplicación pretende fijar procedimientos que se adapten al entorno de trabajo, con la finalidad de responder a cambios de configuración de manera eficaz en el menor tiempo posible.
+									La herramienta fue diseñada para auxiliar al técnico a realizar los cambios de configuración en cada molde que lo requiera, aunque la base de la aplicación puede ser aplicada en actividades similares, por lo que esta libreta pretende ilustrar la arquitectura del software y hardware necesaria para lograr dicho objetivo.
 									
 								
 								</p>
 								
-								<h3>La red neuronal YOLO (you only look once)</h3>
-									YOLO es un sistema encargado de detectar diferentes objetos en imágenes, en su momento causo una gran revolución en el campo de las redes neuronales, 
-									gracias al planteamiento de una arquitectura que funciona mucho mejor que otras, logrando excelentes resultados. El problema principal era que los sistemas que 
-									existían en ese momento utilizaban técnicas que demandaban bastante poder de procesamiento como por ejemplo "sliding windows" por lo que resultaban ser bastante ineficientes y no conseguían llegar a una análisis en tiempo real,
-									la esperanza de estos sistemas era que las GPU's (unidades de procesamiento grafico) mejorarían y el tiempo de análisis mejoraría bastante .es en ese momento cuando llega
-									Joseph raymond y compañia, como cuando le estaban partiendo en su madre al octágon y llegaba la parka a tirarle un paro para acabar con todo eso.
+								<h3>Estructura de la Aplicación</h3>
+									Un molde de inyección de plástico está compuesto por múltiples elementos, y para realizar cambios en su configuración es necesario intercambiar dichos elementos, con el fin de obtener una forma diferente en el producto final. El proceso para realizar estos cambios se lleva a cabo de la siguiente manera:<br><br>
+									Cada molde se identifica mediante un número único, compuesto por dos cifras iniciales, un guion, y un número de siete cifras que conforma el identificador completo del molde.
+
+									Ejemplos de sintaxis:
+									
+									- (21-1234567)
+									- (20-2345678)
+									- (19-4224674)
+									Los moldes que permiten cambios de configuración tienen asociado un número de parte que corresponde a una "familia".
+									
+									Ejemplo ficticio:
+									El molde identificado como (21-1234567) requiere un cambio de configuración en la familia 2203456, donde la configuración entrante será la variante -1.
+									
+									Las posibles configuraciones serían:
+									
+									- 2203456-1
+									- 2203456-2
+									- 2203456-3
+									Un único molde puede estar asociado a una sola familia con una o varias configuraciones, o a un conjunto de familias, cada una con su propio subconjunto de configuraciones posibles.
 									<br><br>
 								
 								<ul>
