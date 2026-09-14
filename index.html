@@ -68,7 +68,15 @@ body.home .sec{display:none}
 @media (max-width:620px){#home .nums{grid-template-columns:1fr 1fr}}
 #home .right{display:flex;flex-direction:column;align-items:center;gap:30px}
 #home .enter{display:grid;grid-template-columns:1fr;gap:10px;width:100%;max-width:400px}
-#home .enter a{border:1px solid var(--line2);background:var(--glass);backdrop-filter:blur(6px);border-radius:14px;padding:16px 16px 14px;transition:.2s;display:block}
+#home .enter a{position:relative;border:1px solid var(--line2);background:var(--glass);backdrop-filter:blur(6px);border-radius:14px;padding:16px 42px 14px 16px;transition:.2s;display:block;cursor:pointer;animation:pulse 3.2s ease-in-out infinite}
+#home .enter a:nth-child(2){animation-delay:.55s} #home .enter a:nth-child(3){animation-delay:1.1s}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(127,211,255,0);border-color:var(--line2)}50%{box-shadow:0 0 26px -6px rgba(127,211,255,.55);border-color:rgba(127,211,255,.6)}}
+#home .enter a::after{content:"→";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:18px;font-weight:700;color:var(--cyan);transition:.2s}
+#home .enter a:hover::after{right:11px;color:var(--blue)}
+#home .enter a:hover{animation:none}
+#home .ehint{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--cyan);margin-bottom:10px}
+#home .ehint::before{content:"";width:18px;height:1px;background:var(--cyan)}
+@media (prefers-reduced-motion:reduce){#home .enter a{animation:none}}
 #home .enter a:hover{background:#fff;color:var(--bg2);transform:translateY(-3px)}
 #home .enter i{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--cyan)}
 #home .enter a:hover i{color:var(--blue)}
@@ -300,6 +308,7 @@ a.c{text-decoration:none}
 <nav><div class="wrap">
   <a class="brand" href="#" data-home><i></i>Axel Uribe</a>
   <div class="tabs">
+    <a href="#" data-home title="Volver al inicio"><b>⌂</b><span>Inicio</span></a>
     <a href="#actual" data-s="actual"><b>01</b><span>Trabajo actual y logros</span></a>
     <a href="#carrera" data-s="carrera"><b>02</b><span>Carrera y reconocimientos</span></a>
     <a href="#proyectos" data-s="proyectos"><b>03</b><span>Proyectos y galería</span></a>
@@ -336,6 +345,7 @@ a.c{text-decoration:none}
       <img src="images/iac.jpg" alt="Jonnathan Axel Uribe Enríquez">
       <span class="ov"></span>
     </div>
+    <div class="ehint">Elige una sección para entrar</div>
     <div class="enter">
       <a href="#actual" data-s="actual"><i>01</i><b>Trabajo actual y logros</b><small>Puesto vigente · febrero 2026 a la fecha</small></a>
       <a href="#carrera" data-s="carrera"><i>02</i><b>Carrera y reconocimientos</b><small>Puestos, formación y constancias</small></a>
@@ -350,7 +360,7 @@ a.c{text-decoration:none}
 <section class="sec" id="actual">
   <div class="head">
     <div><div class="k">01 · Trabajo actual y logros</div><h2>Encargado de tool room · Molex, Guadalajara</h2><p>Puesto vigente desde febrero de 2026. Cuarto puesto dentro de la misma planta, después de ingeniería de diseño, supervisión de turno e ingeniería de tooling. Indicador rector del área: porcentaje de downtime del tool room, con mantenimiento preventivo incluido, medido contra meta interna. Resultado: reducción superior al 85 % desde el arranque de la gestión, con todos los meses cerrados bajo meta a partir del segundo mes.</p></div>
-    <div class="nx"><button class="btn p" data-s="carrera">Siguiente →</button></div>
+    <div class="nx"><button class="btn" data-home>⌂ Inicio</button><button class="btn p" data-s="carrera">Siguiente →</button></div>
   </div>
 
   <div class="grid c12">
@@ -435,14 +445,14 @@ a.c{text-decoration:none}
       </div>
     </div>
   </div>
-  <div class="foot"><span>Sección 1 de 3</span><div class="pager"><button class="btn" data-home>Inicio</button><button class="btn p" data-s="carrera">Siguiente: Carrera y reconocimientos →</button></div></div>
+  <div class="foot"><span>Sección 1 de 3</span><div class="pager"><button class="btn" data-home>⌂ Inicio</button><button class="btn p" data-s="carrera">Siguiente: Carrera y reconocimientos →</button></div></div>
 </section>
 
 <!-- ================= 02 ================= -->
 <section class="sec" id="carrera">
   <div class="head">
     <div><div class="k">02 · Carrera y reconocimientos</div><h2>Trayectoria técnica y de gestión</h2><p>Base técnica en diseño de moldes, maquinado CNC y EDM, tool making y reparación con soldadura TIG. Después, ingeniería de proceso de moldeo, instrucción técnica y dirección de un tool room completo. Reconocimientos y constancias documentados.</p></div>
-    <div class="nx"><button class="btn" data-s="actual">← Anterior</button><button class="btn p" data-s="proyectos">Siguiente →</button></div>
+    <div class="nx"><button class="btn" data-home>⌂ Inicio</button><button class="btn" data-s="actual">← Anterior</button><button class="btn p" data-s="proyectos">Siguiente →</button></div>
   </div>
   <div class="grid c12">
     <div class="card s7">
@@ -517,17 +527,18 @@ a.c{text-decoration:none}
       <div class="cl"><a href="https://coursera.org/share/3de65404a788978506fb458b29b35232" target="_blank" rel="noopener">Neural Networks and Deep Learning ↗</a><a href="https://coursera.org/share/c8a99ff6f577d34fd3516dad40e2c690" target="_blank" rel="noopener">Convolutional Neural Networks ↗</a><a href="https://coursera.org/share/871790acd412e1f264d943d61d77b13d" target="_blank" rel="noopener">Sequence Models ↗</a><a href="https://coursera.org/share/f37c0324238ea4926a417b97dcb64d2b" target="_blank" rel="noopener">The Data Scientist’s Toolbox ↗</a><a href="https://coursera.org/share/0905b60185ca77ae46c87566cf40fafa" target="_blank" rel="noopener">R Programming ↗</a><a href="https://semana.mat.uson.mx/semanaxxx/" target="_blank" rel="noopener">Semana Nacional de Investigación y Docencia en Matemáticas ↗</a></div>
     </div>
   </div>
-  <div class="foot"><span>Sección 2 de 3</span><div class="pager"><button class="btn" data-s="actual">← Trabajo actual</button><button class="btn p" data-s="proyectos">Siguiente: Proyectos y galería →</button></div></div>
+  <div class="foot"><span>Sección 2 de 3</span><div class="pager"><button class="btn" data-home>⌂ Inicio</button><button class="btn" data-s="actual">← Trabajo actual</button><button class="btn p" data-s="proyectos">Siguiente: Proyectos y galería →</button></div></div>
 </section>
 
 <!-- ================= 03 ================= -->
 <section class="sec" id="proyectos">
   <div class="head">
     <div><div class="k">03 · Proyectos y galería</div><h2>Sistemas desarrollados y trabajo de taller</h2><p>Nueve sistemas desarrollados internamente sobre SQL Server, C#, Python y JavaScript, en uso en piso. Abajo, el trabajo de taller documentado por proceso y la base de análisis de datos detrás de los sistemas.</p></div>
-    <div class="nx"><button class="btn" data-s="carrera">← Anterior</button><button class="btn p" data-home>Inicio</button></div>
+    <div class="nx"><button class="btn" data-s="carrera">← Anterior</button><button class="btn p" data-home>⌂ Inicio</button></div>
   </div>
   <div class="card">
     <h3><i></i>Sistemas en operación</h3>
+    <p class="sub" style="max-width:900px">No son configuraciones de un software comercial. En la industria de moldeo no existe un producto que haga esto: mantenimiento preventivo digital con autoevaluación del molde, comparación de configuración entre números de parte, planeación validada contra el PM o validación del armado por visión. Cada herramienta se desarrolló desde cero para una problemática real de taller y hoy opera en piso.</p>
     <div class="g3">
       <div class="pj"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div><div><div class="k">Datos</div><h4>Base de datos del taller y APIs</h4></div></div><p>SQL Server con esquema propio de mantenimiento; handlers en C# para fallas, IQN, scrap, PM y downtime.</p><div class="r">Un solo origen de datos</div></div>
       <div class="pj"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 3 5-8 4 5M3 21h18"/></svg></div><div><div class="k">Analítica</div><h4>Dashboards del Tool Room</h4></div></div><p>Fallas por molde, MTBF/MTTR, %DT vs meta, IQN y scrap, downtime de planta, SAU, explorador de moldes.</p><div class="r">Junta diaria con datos</div></div>
@@ -541,15 +552,15 @@ a.c{text-decoration:none}
     </div>
   </div>
   <div class="card feat">
-    <span class="tag">Proyecto propio · en desarrollo</span>
+    <span class="tag">Desarrollo en planta · TE Connectivity · con el área de AMT</span>
     <h3>Inspección de moldes por visión: validar el armado, no la pieza</h3>
-    <p class="sub" style="max-width:860px">Los sistemas de visión industrial de catálogo están hechos para inspeccionar la pieza producida. Este proyecto los aplica un paso antes, sobre el herramental: verificar que el molde quedó armado con los componentes correctos, que es donde se originan colisiones, componentes rotos y scrap.</p>
+    <p class="sub" style="max-width:880px">Trabajo desarrollado para resolver una problemática recurrente de armado de molde durante los cambios de configuración. Los sistemas de visión industrial de catálogo están hechos para inspeccionar la pieza producida; aquí se aplican un paso antes, sobre el herramental, para verificar que el molde quedó armado con los componentes correctos, que es donde se originan colisiones, componentes rotos y scrap.</p>
     <div class="fx">
       <div>
-        <h4 style="margin-top:0">Problema</h4>
+        <h4 style="margin-top:0">Problemática que lo originó</h4>
         <p>Durante el cambio de configuración, distinguir entre componentes de molde con geometría casi idéntica depende del criterio del técnico y del turno. Un armado incorrecto que no se detecta termina en colisión al arrancar producción, con componentes a reemplazar o fabricar y tiempo comprometido con el cliente. Cuando no colisiona, genera scrap y queja de cliente.</p>
         <h4>Enfoque actual: fotometría estereoscópica</h4>
-        <p>Desarrollo en conjunto con el área de AMT de un algoritmo inspirado en fotometría estereoscópica, en la línea de LumiTrax. Se capturan varias imágenes del mismo molde bajo distintas condiciones de iluminación, se calculan las normales de superficie y se estima la topografía. Con eso se detectan errores de ensamble y anomalías sin depender de una red neuronal, lo que hace el resultado interpretable y ajustable en piso.</p>
+        <p>Algoritmo desarrollado en conjunto con el área de AMT, inspirado en fotometría estereoscópica, en la línea de LumiTrax. Se capturan varias imágenes del mismo molde bajo distintas condiciones de iluminación, se calculan las normales de superficie y se estima la topografía. Con eso se detectan errores de ensamble y anomalías sin depender de una red neuronal, lo que hace el resultado interpretable y ajustable en piso.</p>
         <h4>Alternativas evaluadas</h4>
         <p>Redes neuronales con extracción de características y data augmentation para generalizar entre familias de molde, y template matching clásico para comparación de patrones. El proyecto combina el enfoque avanzado y el convencional según el tipo de componente a verificar.</p>
         <h4>Hardware</h4>
