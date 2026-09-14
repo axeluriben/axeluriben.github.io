@@ -66,7 +66,7 @@ body.home .sec{display:none}
 #home .nums b{display:block;font-size:25px;font-weight:800;letter-spacing:-.03em}
 #home .nums span{display:block;font-size:11px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;line-height:1.3;margin-top:2px}
 @media (max-width:620px){#home .nums{grid-template-columns:1fr 1fr}}
-#home .right{display:flex;flex-direction:column;align-items:center;gap:30px}
+#home .right{display:flex;flex-direction:column;align-items:center;gap:26px}
 #home .enter{display:grid;grid-template-columns:1fr;gap:10px;width:100%;max-width:400px}
 #home .enter a{position:relative;border:1px solid var(--line2);background:var(--glass);backdrop-filter:blur(6px);border-radius:14px;padding:16px 42px 14px 16px;transition:.2s;display:block;cursor:pointer;animation:pulse 3.2s ease-in-out infinite}
 #home .enter a:nth-child(2){animation-delay:.55s} #home .enter a:nth-child(3){animation-delay:1.1s}
@@ -83,7 +83,7 @@ body.home .sec{display:none}
 #home .enter b{display:block;font-size:15px;font-weight:700;margin-top:6px;line-height:1.25}
 #home .enter small{display:block;font-size:12px;color:var(--muted);margin-top:4px}
 #home .enter a:hover small{color:#5b6b8f}
-#home .photo{justify-self:center;position:relative;width:min(330px,72vw);aspect-ratio:1}
+#home .photo{justify-self:center;position:relative;flex:none;width:min(268px,60vw);height:min(268px,60vw);border-radius:50%}
 #home .photo::before{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 200deg,var(--cyan),var(--blue) 40%,transparent 70%,var(--cyan));opacity:.9;animation:spin 18s linear infinite}
 @keyframes spin{to{transform:rotate(1turn)}}
 #home .photo::after{content:"";position:absolute;inset:-6px;border-radius:50%;background:var(--bg2)}
@@ -92,7 +92,7 @@ body.home .sec{display:none}
 #home .badge{position:absolute;z-index:2;background:#fff;color:var(--bg2);border-radius:12px;padding:10px 14px;font-size:12px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,.35)}
 #home .badge b{display:block;font-size:18px;letter-spacing:-.02em}
 #home .b1{left:-16px;bottom:34px} #home .b2{right:-10px;top:30px}
-@media (max-width:900px){#home .wrap{grid-template-columns:1fr;padding-top:32px}#home .right{display:contents}#home .photo{order:-1;width:min(240px,60vw);margin-inline:auto}#home .enter{max-width:none;margin-top:30px}#home .badge{display:none}}
+@media (max-width:900px){#home .wrap{grid-template-columns:1fr;padding-top:32px}#home .right{display:contents}#home .photo{order:-1;width:min(210px,54vw);height:min(210px,54vw);margin-inline:auto}#home .enter{max-width:none;margin-top:30px}#home .badge{display:none}}
 @media (prefers-reduced-motion:reduce){#home .photo::before{animation:none}}
 
 /* ===== sections ===== */
@@ -374,7 +374,7 @@ a.c{text-decoration:none}
         <div><b>Responsabilidad</b>PM, reparaciones, refacciones, headcount, presupuesto</div>
         <div><b>Reporta a</b>Gerencia de planta · ingeniería corporativa en Asia</div>
         <div><b>Sistemas propios</b>SQL Server · C# · Python · JS</div>
-        <div style="grid-column:1/-1"><b>Trayectoria en Molex</b>Ingeniero de diseño → Supervisor de turno → Ingeniero de tooling → Encargado del taller</div>
+        <div style="grid-column:1/-1"><b>Trayectoria en Molex</b>En la planta desde febrero de 2025: Ingeniero de diseño → Supervisor de turno → Ingeniero de tooling → Encargado del taller</div>
       </div>
       <div class="kpis" style="margin-top:16px;grid-template-columns:1fr 1fr">
         <div class="kpi"><b class="or">&gt;85 %</b><span>reducción de downtime</span></div>
@@ -451,7 +451,7 @@ a.c{text-decoration:none}
 <!-- ================= 02 ================= -->
 <section class="sec" id="carrera">
   <div class="head">
-    <div><div class="k">02 · Carrera y reconocimientos</div><h2>Trayectoria técnica y de gestión</h2><p>Base técnica en diseño de moldes, maquinado CNC y EDM, tool making y reparación con soldadura TIG. Después, ingeniería de proceso de moldeo, instrucción técnica y dirección de un tool room completo. Reconocimientos y constancias documentados.</p></div>
+    <div><div class="k">02 · Carrera y reconocimientos</div><h2>Trayectoria técnica y de gestión</h2><p>Licenciatura en Ciencias de la Computación por la Universidad de Sonora, con especialización continua en inteligencia artificial, sobre una base técnica de diseño de moldes, maquinado CNC y EDM, tool making y soldadura TIG. Trayectoria en IAC Group, TE Connectivity y Molex, de piso a la dirección de un tool room completo.</p></div>
     <div class="nx"><button class="btn" data-home>⌂ Inicio</button><button class="btn" data-s="actual">← Anterior</button><button class="btn p" data-s="proyectos">Siguiente →</button></div>
   </div>
   <div class="grid c12">
@@ -459,24 +459,24 @@ a.c{text-decoration:none}
       <h3><i></i>Trayectoria</h3>
       <div style="margin-top:14px">
         <div class="job">
-          <div class="yr"><span class="todo">MM AAAA</span> a la fecha<br><small style="font-weight:500;letter-spacing:0">4 puestos en la misma planta</small></div>
-          <div><h4>Encargado de tool room</h4><p class="co">Molex (Koch Industries) · Guadalajara, Jalisco · cuatro puestos en la misma planta, de ingeniería de diseño a la dirección del taller</p>
+          <div class="yr">FEB 2025 · A LA FECHA<br><small style="font-weight:500;letter-spacing:0">4 puestos en la misma planta</small></div>
+          <div><h4>Encargado de tool room</h4><p class="co">Molex (Koch Industries) · Guadalajara, Jalisco · ingreso el 7 de febrero de 2025; cuatro puestos en la misma planta, de ingeniería de diseño a la dirección del taller</p>
             <div class="steps">
-              <div><b>Ingeniero de diseño</b><span><span class="todo">MM AAAA</span> a <span class="todo">MM AAAA</span></span>Diseño y modificación de moldes y componentes.</div>
-              <div><b>Supervisor de turno</b><span><span class="todo">MM AAAA</span> a <span class="todo">MM AAAA</span></span>Turno del tool room: reparaciones, prioridades y personal.</div>
-              <div><b>Ingeniero de tooling</b><span><span class="todo">MM AAAA</span> a ene 2026</span>Análisis de fallas, causa raíz y mejora de moldes.</div>
+              <div><b>Ingeniero de diseño</b><span>Ingreso a la planta</span>Diseño y modificación de moldes y componentes.</div>
+              <div><b>Supervisor de turno</b><span>Operación en piso</span>Turno del tool room: reparaciones, prioridades y personal.</div>
+              <div><b>Ingeniero de tooling</b><span>Hasta enero 2026</span>Análisis de fallas, causa raíz y mejora de moldes.</div>
               <div class="on"><b>Encargado del taller</b><span>Feb 2026 a la fecha</span>Puesto vigente: más de 200 moldes, 4 turnos, más de 20 técnicos.</div>
             </div>
             <ul><li>Responsable del tool room en operación continua a 4 turnos, con más de 200 moldes activos: PM, reparaciones, refacciones, métricas, evaluaciones, headcount y presupuesto.</li><li><b>Downtime del tool room reducido más del 85 % desde el arranque de la gestión</b>, con todos los meses cerrados bajo la meta interna a partir del segundo mes.</li><li>Ecosistema digital del taller, PM Digital, Changeover App, planeador con validación de PM, capacidad de carga y modelo de headcount.</li><li>Causa raíz en moldes críticos (e-DART, IQN, CAD/ECTR); reportes y presentaciones en inglés a gerencia de planta y a ingeniería corporativa. Academia técnica, matriz de habilidades y gestión basada en principios (PBM).</li></ul></div>
         </div>
         <div class="job">
-          <div class="yr"><span class="todo">MM AAAA</span> a <span class="todo">MM AAAA</span></div>
-          <div><h4><span class="todo">Puesto (p. ej. Ingeniero de Herramentales)</span> · Instructor técnico</h4><p class="co">TE Connectivity · Hermosillo, Sonora · Academia de Moldeo</p>
+          <div class="yr">ANTES DE FEB 2025<br><small style="font-weight:500;letter-spacing:0"><span class="todo">MM AAAA</span> a <span class="todo">MM AAAA</span></small></div>
+          <div><h4>Herramentales y proceso de moldeo · Instructor técnico</h4><p class="co">TE Connectivity, antes Tyco Electronics · Hermosillo, Sonora · Academia de Moldeo</p>
             <ul><li>Reparación y modificación de moldes: electrodos de grafito, EDM de cavidades y costillas, insertos P20 con ajuste de −0.001", recubrimiento TIG con remaquinado CNC, pulido y ajuste de sello.</li><li>Instructor de la Academia de Moldeo (segunda generación). Asistente en Python para cambios de configuración de moldes.</li></ul></div>
         </div>
         <div class="job">
-          <div class="yr"><span class="todo">MM AAAA</span> a <span class="todo">MM AAAA</span></div>
-          <div><h4><span class="todo">Puesto (Maquinista CNC / Matricero / Diseñador de moldes)</span></h4><p class="co"><span class="todo">Proveedor automotriz</span> · <span class="todo">Ciudad</span></p>
+          <div class="yr">INICIO DE CARRERA<br><small style="font-weight:500;letter-spacing:0"><span class="todo">MM AAAA</span> a <span class="todo">MM AAAA</span></small></div>
+          <div><h4>Maquinado CNC y herramentales</h4><p class="co">IAC Group · industria automotriz · <span class="todo">ciudad</span></p>
             <ul><li>Maquinado CNC (Haas VF-2) de componentes en D2 para estampado, corte por hilo y tratamiento térmico; fixtures y piezas de acero y aluminio a plano. <span class="todo">1 punto más</span></li></ul></div>
         </div>
       </div>
@@ -493,8 +493,8 @@ a.c{text-decoration:none}
     <div class="card s5">
       <h3><i></i>Formación</h3>
       <ul class="list" style="margin-top:12px">
-        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div><div><b><span class="todo">Carrera</span></b><span><span class="todo">Universidad, ciudad, año</span></span></div></li>
-        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><div><b>IA y machine learning</b><span>Con el Dr. Julio Waissman, Universidad de Sonora <span class="todo">programa / años</span></span></div></li>
+        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div><div><b>Licenciatura en Ciencias de la Computación</b><span>Universidad de Sonora · especialización continua en inteligencia artificial desde entonces</span></div></li>
+        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><div><b>IA y machine learning</b><span>Formación con el Dr. Julio Waissman, Universidad de Sonora</span></div></li>
         <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div><div><b>Moldeo Sistemático</b><span>Proceso independiente de la máquina, mejora con datos, comportamiento de polímeros.</span></div></li>
         <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div><div><b>DeepLearning.AI y Johns Hopkins (Coursera)</b><span>Neural Networks and Deep Learning · CNN · Sequence Models · Data Scientist’s Toolbox · R Programming</span></div></li>
         <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div><div><b><span class="todo">RJG / hot runner / lean / ISO 13485</span></b><span>si aplica</span></div></li>
