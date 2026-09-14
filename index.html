@@ -219,6 +219,39 @@ body.home .sec{display:none}
 .pj .r.m{color:var(--muted)} .pj .r.m::before{background:var(--muted)}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
 @media (max-width:1000px){.g3{grid-template-columns:1fr 1fr}} @media (max-width:640px){.g3{grid-template-columns:1fr}}
+.feat{border:1px solid rgba(127,211,255,.34);background:linear-gradient(140deg,rgba(47,107,240,.18),rgba(255,255,255,.04) 60%);margin-top:14px}
+.feat .tag{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--cyan);background:rgba(127,211,255,.12);border:1px solid rgba(127,211,255,.3);border-radius:999px;padding:4px 11px}
+.feat h3{margin-top:12px;font-size:clamp(20px,2.3vw,26px)}
+.fx{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:16px;align-items:start}
+.fx p{font-size:14.5px;color:var(--ink2)}
+.fx p+p{margin-top:10px}
+.fx h4{font-size:13px;font-weight:700;color:#fff;margin-top:16px;letter-spacing:0}
+.fimg{display:grid;gap:10px}
+.fimg figure{margin:0;border:1px solid var(--line2);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.04);cursor:zoom-in}
+.fimg .fr{height:190px;position:relative;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,rgba(255,255,255,.02) 0 10px,transparent 10px 20px)}
+.fimg .fr img{width:100%;height:100%;object-fit:cover}
+.fimg figcaption{font-size:11.5px;color:var(--muted);padding:7px 11px;border-top:1px solid var(--line);background:rgba(10,20,40,.45)}
+.fimg figure.miss .fr::after{content:attr(data-file);position:absolute;inset:6px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;color:#fcd34d;background:rgba(251,191,36,.08);border:1px dashed #f59e0b;border-radius:8px}
+.fimg figure.miss img{display:none}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:16px;counter-reset:fp}
+.flow div{position:relative;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:10px;padding:10px 11px;font-size:12px;color:var(--ink2);line-height:1.35}
+.flow div::before{counter-increment:fp;content:counter(fp);display:block;font-size:10px;font-weight:800;color:var(--cyan);margin-bottom:4px}
+.flow div b{display:block;color:#fff;font-size:12.5px;font-weight:700;margin-bottom:2px}
+@media (max-width:900px){.fx{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}}
+.groups{display:grid;gap:16px;margin-top:14px}
+.grp .gh{display:flex;gap:12px;align-items:flex-start;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.grp .gn{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--cyan);padding-top:3px}
+.grp .gh b{display:block;font-size:15px;font-weight:700;color:#fff;line-height:1.25}
+.grp .gh span{display:block;font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.4}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:10px}
+.thumb{margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:rgba(255,255,255,.04);cursor:zoom-in;transition:.18s}
+.thumb:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.thumb .fr{height:110px;position:relative;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,rgba(255,255,255,.02) 0 10px,transparent 10px 20px)}
+.thumb .fr img{width:100%;height:100%;object-fit:cover}
+.thumb.miss .fr::after{content:attr(data-file);position:absolute;inset:4px;display:flex;align-items:center;justify-content:center;text-align:center;padding:6px;font-size:10.5px;color:#fcd34d;background:rgba(251,191,36,.08);border:1px dashed #f59e0b;border-radius:7px}
+.thumb.miss img{display:none}
+@media (max-width:560px){.thumbs{grid-template-columns:repeat(auto-fill,minmax(100px,1fr))}.thumb .fr{height:92px}}
+a.c{text-decoration:none}
 .certs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:14px}
 .cert{border:1px solid var(--line2);background:rgba(255,255,255,.05);border-radius:12px;overflow:hidden;cursor:zoom-in;margin:0;transition:.18s}
 .cert:hover{transform:translateY(-3px);border-color:var(--cyan)}
@@ -490,7 +523,7 @@ body.home .sec{display:none}
 <!-- ================= 03 ================= -->
 <section class="sec" id="proyectos">
   <div class="head">
-    <div><div class="k">03 · Proyectos y galería</div><h2>Sistemas desarrollados y trabajo de taller</h2><p>Nueve sistemas desarrollados internamente sobre SQL Server, C#, Python y JavaScript, en uso en piso. Abajo, una selección de maquinados y reparaciones de molde documentados en taller.</p></div>
+    <div><div class="k">03 · Proyectos y galería</div><h2>Sistemas desarrollados y trabajo de taller</h2><p>Nueve sistemas desarrollados internamente sobre SQL Server, C#, Python y JavaScript, en uso en piso. Abajo, el trabajo de taller documentado por proceso y la base de análisis de datos detrás de los sistemas.</p></div>
     <div class="nx"><button class="btn" data-s="carrera">← Anterior</button><button class="btn p" data-home>Inicio</button></div>
   </div>
   <div class="card">
@@ -504,26 +537,87 @@ body.home .sec{display:none}
       <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><div class="k">Planeación</div><h4>Capacidad de carga</h4></div></div><p>Changeovers, PM y reparaciones convertidos a carga diaria por técnico; redistribución solo hacia atrás.</p><div class="r">Capacidad diaria cuantificada</div></div>
       <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0114 0M16 4.5a3.5 3.5 0 010 7M22 20a6 6 0 00-4-5.6"/></svg></div><div><div class="k">Personas</div><h4>Headcount y escenarios</h4></div></div><p>Headcount derivado de las horas máquina disponibles; escenarios de cobertura y distribución por turno.</p><div class="r">Caso de staffing sustentado</div></div>
       <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 6-6"/></svg></div><div><div class="k">Personas</div><h4>Bitácora y scorecard</h4></div></div><p>Desempeño por técnico y supervisor, matriz de habilidades por tarea, retornos.</p><div class="r">Ruta de desarrollo por técnico</div></div>
-      <div class="pj"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><div><div class="k">Visión</div><h4>HORUS · visión por computadora</h4></div></div><p>Validación del armado de molde y detección de anomalías en pieza con modelos de visión (YOLO): de revisar por muestreo a detectar en el momento, con el mismo criterio en los 4 turnos.</p><div class="r m">Cambio de paradigma en inspección</div></div>
+      <div class="pj"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><div><div class="k">Visión</div><h4>HORUS · visión por computadora</h4></div></div><p>Validación del armado de molde y detección de anomalías en pieza con modelos de visión (YOLO): de revisar por muestreo a detectar en el momento, con el mismo criterio en los 4 turnos.</p><div class="r m">Cambio de paradigma · detalle abajo</div></div>
+    </div>
+  </div>
+  <div class="card feat">
+    <span class="tag">Proyecto propio · en desarrollo</span>
+    <h3>Inspección de moldes por visión: validar el armado, no la pieza</h3>
+    <p class="sub" style="max-width:860px">Los sistemas de visión industrial de catálogo están hechos para inspeccionar la pieza producida. Este proyecto los aplica un paso antes, sobre el herramental: verificar que el molde quedó armado con los componentes correctos, que es donde se originan colisiones, componentes rotos y scrap.</p>
+    <div class="fx">
+      <div>
+        <h4 style="margin-top:0">Problema</h4>
+        <p>Durante el cambio de configuración, distinguir entre componentes de molde con geometría casi idéntica depende del criterio del técnico y del turno. Un armado incorrecto que no se detecta termina en colisión al arrancar producción, con componentes a reemplazar o fabricar y tiempo comprometido con el cliente. Cuando no colisiona, genera scrap y queja de cliente.</p>
+        <h4>Enfoque actual: fotometría estereoscópica</h4>
+        <p>Desarrollo en conjunto con el área de AMT de un algoritmo inspirado en fotometría estereoscópica, en la línea de LumiTrax. Se capturan varias imágenes del mismo molde bajo distintas condiciones de iluminación, se calculan las normales de superficie y se estima la topografía. Con eso se detectan errores de ensamble y anomalías sin depender de una red neuronal, lo que hace el resultado interpretable y ajustable en piso.</p>
+        <h4>Alternativas evaluadas</h4>
+        <p>Redes neuronales con extracción de características y data augmentation para generalizar entre familias de molde, y template matching clásico para comparación de patrones. El proyecto combina el enfoque avanzado y el convencional según el tipo de componente a verificar.</p>
+        <h4>Hardware</h4>
+        <p>Robot con cámara y escáner 3D integrado para inspección automática del molde ensamblado, con notificación inmediata al usuario.</p>
+        <div class="chips" style="margin-top:14px"><span class="chip">Fotometría estereoscópica</span><span class="chip">Normales de superficie</span><span class="chip">YOLO · CNN</span><span class="chip n">Data augmentation</span><span class="chip n">Template matching</span><span class="chip n">Escáner 3D</span><span class="chip n">Python</span></div>
+      </div>
+      <div class="fimg">
+        <figure><div class="fr" data-file="Falta images/robot3.jpg"><img src="images/robot3.jpg" alt="Robot de inspección con cámara y escáner 3D" loading="lazy" onerror="this.closest('figure').classList.add('miss')"></div><figcaption>Celda de inspección: robot con cámara y escáner 3D</figcaption></figure>
+        <figure><div class="fr" data-file="Falta images/roboto.gif"><img src="images/roboto.gif" alt="Secuencia de inspección del molde" loading="lazy" onerror="this.closest('figure').classList.add('miss')"></div><figcaption>Secuencia de inspección sobre molde ensamblado</figcaption></figure>
+      </div>
+    </div>
+    <div class="flow">
+      <div><b>Captura</b>Varias imágenes del molde bajo distintas iluminaciones</div>
+      <div><b>Normales</b>Cálculo de normales de superficie por pixel</div>
+      <div><b>Topografía</b>Estimación de relieve y geometría del ensamble</div>
+      <div><b>Comparación</b>Contraste contra la configuración correcta esperada</div>
+      <div><b>Alerta</b>Aviso inmediato al técnico antes de mandar el molde a prensa</div>
     </div>
   </div>
   <div class="card" style="margin-top:14px">
-    <h3><i class="or"></i>Galería de maquinados y reparaciones</h3>
-    <p class="sub">Toca una foto para ampliarla. Galería completa en la <a href="industrial.html" style="color:var(--cyan);font-weight:600">página de CAD/CAM</a>.</p>
-    <div class="gal" id="gal">
-      <figure><img src="images/pppprimero.jpg" alt="Componente D2 maquinado en CNC" loading="lazy"><figcaption>D2 para estampado · Haas VF-2 · 3 setups</figcaption></figure>
-      <figure><img src="images/tercero.png" alt="Componente D2, acabado CNC" loading="lazy"><figcaption>D2 · acabado CNC</figcaption></figure>
-      <figure><img src="images/tt1.jpg" alt="Pieza D2 tras corte por hilo" loading="lazy"><figcaption>D2 · hilo · tratamiento térmico</figcaption></figure>
-      <figure><img src="images/ele1.jpg" alt="Electrodo de grafito para EDM" loading="lazy"><figcaption>Electrodo de grafito · EDM de cavidad</figcaption></figure>
-      <figure><img src="images/ele4.jpg" alt="Inserto P20 ajustado" loading="lazy"><figcaption>Inserto P20 · ajuste −0.001" · TIG</figcaption></figure>
-      <figure><img src="images/repa12.jpg" alt="Inserto nuevo con costillas por EDM" loading="lazy"><figcaption>Inserto nuevo · costillas por EDM</figcaption></figure>
-      <figure><img src="images/r1.jpg" alt="Recubrimiento TIG" loading="lazy"><figcaption>Recubrimiento TIG · ajuste de sello</figcaption></figure>
-      <figure><img src="images/m1.jpg" alt="Piezas maquinadas" loading="lazy"><figcaption>Acero y aluminio a plano</figcaption></figure>
+    <h3><i class="or"></i>Taller: maquinado CNC, EDM, soldadura y reparación de moldes</h3>
+    <p class="sub">Trabajo propio documentado en piso, agrupado por proceso. Toca una foto para verla completa.</p>
+    <div class="groups">
+      <div class="grp">
+        <div class="gh"><span class="gn">01</span><div><b>Maquinado CNC · pieza para estampado</b><span>D2 · 3 setups · Haas VF-2</span></div></div>
+        <div class="thumbs"><figure class="thumb"><div class="fr" data-file="Falta images/pppprimero.jpg"><img src="images/pppprimero.jpg" alt="pppprimero" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/segundo.png"><img src="images/segundo.png" alt="segundo" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/tercero.png"><img src="images/tercero.png" alt="tercero" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/cuarto.png"><img src="images/cuarto.png" alt="cuarto" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure></div>
+      </div>
+      <div class="grp">
+        <div class="gh"><span class="gn">02</span><div><b>Maquinado CNC + corte por hilo + tratamiento térmico</b><span>D2 · 1 setup · Haas VF-2 · contorno por hilo</span></div></div>
+        <div class="thumbs"><figure class="thumb"><div class="fr" data-file="Falta images/est2.png"><img src="images/est2.png" alt="est2" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/tt1.jpg"><img src="images/tt1.jpg" alt="tt1" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/tt2.jpg"><img src="images/tt2.jpg" alt="tt2" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure></div>
+      </div>
+      <div class="grp">
+        <div class="gh"><span class="gn">03</span><div><b>Reparación de molde: CNC + EDM + soldadura TIG</b><span>Electrodo de grafito · EDM de cavidad · inserto P20 con ajuste de −0.001" · soldadura de sujeción · pulido · ajuste de parte móvil</span></div></div>
+        <div class="thumbs"><figure class="thumb"><div class="fr" data-file="Falta images/ele1.jpg"><img src="images/ele1.jpg" alt="ele1" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/ele2.jpg"><img src="images/ele2.jpg" alt="ele2" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/ele3.jpg"><img src="images/ele3.jpg" alt="ele3" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/ele4.jpg"><img src="images/ele4.jpg" alt="ele4" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/ele7.jpg"><img src="images/ele7.jpg" alt="ele7" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/ele8.jpg"><img src="images/ele8.jpg" alt="ele8" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/ele9.jpg"><img src="images/ele9.jpg" alt="ele9" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure></div>
+      </div>
+      <div class="grp">
+        <div class="gh"><span class="gn">04</span><div><b>Reparación de molde: inserto nuevo con costillas</b><span>Electrodo de grafito · inserto P20 maquinado en CNC · barrenos de sujeción · EDM de costillas</span></div></div>
+        <div class="thumbs"><figure class="thumb"><div class="fr" data-file="Falta images/repa12.jpg"><img src="images/repa12.jpg" alt="repa12" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/repa13.jpg"><img src="images/repa13.jpg" alt="repa13" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/repa14.jpg"><img src="images/repa14.jpg" alt="repa14" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/repa15.jpg"><img src="images/repa15.jpg" alt="repa15" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/repa5.jpg"><img src="images/repa5.jpg" alt="repa5" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/repa6.jpg"><img src="images/repa6.jpg" alt="repa6" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/repa16.jpg"><img src="images/repa16.jpg" alt="repa16" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/repa8.jpg"><img src="images/repa8.jpg" alt="repa8" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/repa9.jpg"><img src="images/repa9.jpg" alt="repa9" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/repa10.jpg"><img src="images/repa10.jpg" alt="repa10" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure></div>
+      </div>
+      <div class="grp">
+        <div class="gh"><span class="gn">05</span><div><b>Reparación de molde: recubrimiento y ajuste de sello</b><span>Recubrimiento de soldadura · desbaste en CNC · pulido manual con turboLap · ajuste de sello</span></div></div>
+        <div class="thumbs"><figure class="thumb"><div class="fr" data-file="Falta images/r1.jpg"><img src="images/r1.jpg" alt="r1" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/r2.jpg"><img src="images/r2.jpg" alt="r2" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/r3.jpg"><img src="images/r3.jpg" alt="r3" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/r4.jpg"><img src="images/r4.jpg" alt="r4" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/r5.jpg"><img src="images/r5.jpg" alt="r5" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/r6.jpg"><img src="images/r6.jpg" alt="r6" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure></div>
+      </div>
+      <div class="grp">
+        <div class="gh"><span class="gn">06</span><div><b>Maquinados varios</b><span>Piezas de acero y aluminio a plano, distintas aplicaciones</span></div></div>
+        <div class="thumbs"><figure class="thumb"><div class="fr" data-file="Falta images/m1.jpg"><img src="images/m1.jpg" alt="m1" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/m2.jpg"><img src="images/m2.jpg" alt="m2" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/m3.jpg"><img src="images/m3.jpg" alt="m3" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/m4.jpg"><img src="images/m4.jpg" alt="m4" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/m5.jpg"><img src="images/m5.jpg" alt="m5" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/muchas1.jpg"><img src="images/muchas1.jpg" alt="muchas1" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/muchas3.png"><img src="images/muchas3.png" alt="muchas3" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/muchas4.jpg"><img src="images/muchas4.jpg" alt="muchas4" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/muchas 5.jpg"><img src="images/muchas%205.jpg" alt="muchas 5" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure></div>
+      </div>
+      <div class="grp">
+        <div class="gh"><span class="gn">07</span><div><b>Soldadura</b><span>Aplicación de soldadura en componentes de molde y fixtures</span></div></div>
+        <div class="thumbs"><figure class="thumb"><div class="fr" data-file="Falta images/ss1.jpg"><img src="images/ss1.jpg" alt="ss1" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/ss2.jpg"><img src="images/ss2.jpg" alt="ss2" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/ss3.jpg"><img src="images/ss3.jpg" alt="ss3" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure><figure class="thumb"><div class="fr" data-file="Falta images/latas2.png"><img src="images/latas2.png" alt="latas2" loading="lazy" onerror="this.closest('.thumb').classList.add('miss')"></div></figure></div>
+      </div>
     </div>
-    <div class="g3">
-      <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.4 2.4-2.1-.6-.6-2.1z"/></svg></div><div><div class="k">Reparación</div><h4>CNC + EDM + TIG</h4></div></div><p>1. Electrodo de grafito · 2. EDM de cavidad para inserto · 3. Inserto P20, ajuste −0.001" · 4. Soldadura de sujeción y pulido · 5. Ajuste de parte móvil</p></div>
-      <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.4 2.4-2.1-.6-.6-2.1z"/></svg></div><div><div class="k">Reparación</div><h4>Inserto nuevo con costillas</h4></div></div><p>1. Electrodo de grafito · 2. Inserto P20 en CNC · 3. Barrenos de sujeción · 4. EDM de costillas</p></div>
-      <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.4 2.4-2.1-.6-.6-2.1z"/></svg></div><div><div class="k">Reparación</div><h4>Soldadura y sello</h4></div></div><p>1. Recubrimiento TIG · 2. Desbaste en CNC · 3. Pulido manual (turboLap) · 4. Ajuste de sello</p></div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <h3><i></i>Análisis de datos y machine learning</h3>
+    <p class="sub">Base técnica detrás de los sistemas del taller y de los proyectos de visión por computadora.</p>
+    <div class="grid c12" style="margin-top:14px">
+      <div class="s7">
+        <p style="font-size:14.5px;color:var(--ink2)">Trabajo con datos aplicado a manufactura: extracción y limpieza de datos de piso, modelos supervisados y no supervisados, y redes neuronales para tratamiento de imagen. Es la base con la que después se construyeron la base de datos del taller, los dashboards y HORUS.</p>
+        <div class="chips" style="margin-top:12px"><span class="chip n">Python · R</span><span class="chip n">Regresión y árboles de decisión</span><span class="chip n">Clustering</span><span class="chip n">Redes neuronales · CNN</span><span class="chip n">Web scraping</span><span class="chip n">SQL Server</span></div>
+      </div>
+      <div class="s5">
+        <div class="rows">
+          <div class="row"><span>Aprendizaje supervisado: regresión lineal y árbol de regresión</span><a class="c" href="https://nbviewer.jupyter.org/github/axeluriben/axeluriben.github.io/blob/95272c4ac8f30bd177a170cde664663f9f7619fb/regtree.ipynb" target="_blank" rel="noopener">Notebook ↗</a></div>
+          <div class="row"><span>Aprendizaje no supervisado: clustering</span><a class="c" href="https://nbviewer.jupyter.org/github/axeluriben/axeluriben.github.io/blob/master/regression.ipynb" target="_blank" rel="noopener">Notebook ↗</a></div>
+          <div class="row"><span>Ponencia sobre ciencia de datos aplicada a la dark web</span><span class="c ok">Universidad de Sonora</span></div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="foot"><span>Sección 3 de 3 · © <span id="yr"></span> Jonnathan Axel Uribe Enríquez · axeluriben@gmail.com</span><div class="pager"><button class="btn" data-s="carrera">← Carrera</button><button class="btn p" data-home>Volver al inicio</button></div></div>
@@ -545,7 +639,7 @@ function go(id){
 document.addEventListener('click', function(e){
   var h = e.target.closest('[data-home]'); if (h){ e.preventDefault(); goHome(); return; }
   var el = e.target.closest('[data-s]'); if (el){ e.preventDefault(); go(el.dataset.s); return; }
-  var f = e.target.closest('#gal figure, .cert'); if (f){ document.getElementById('lbimg').src = f.querySelector('img').src; document.getElementById('lb').classList.add('open'); }
+  var f = e.target.closest('.cert, .thumb, .fimg figure'); if (f){ document.getElementById('lbimg').src = f.querySelector('img').src; document.getElementById('lb').classList.add('open'); }
 });
 document.getElementById('lb').addEventListener('click', function(){ document.getElementById('lb').classList.remove('open'); });
 document.addEventListener('keydown', function(e){ if (e.key === 'Escape') document.getElementById('lb').classList.remove('open'); });
