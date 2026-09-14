@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Axel Uribe · Encargado de tool room · Moldeo por inyección</title>
+<meta name="description" content="Jonnathan Axel Uribe Enríquez. Encargado de tool room e ingeniero de herramentales, actualmente empleado en moldeo por inyección. Trabajo actual y logros, carrera y reconocimientos, proyectos y galería de maquinados.">
+<meta property="og:title" content="Axel Uribe · Encargado de tool room · Moldeo por inyección">
+<meta property="og:description" content="Trabajo actual y logros, carrera y reconocimientos, proyectos y galería.">
+<meta property="og:image" content="images/iac.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a1428; --bg2:#0f1f3d; --bg3:#16294f; --ink:#f3f6fb; --ink2:#c7d2ea; --muted:#93a4c9; --dim:#5f6f92;
+  --cyan:#7fd3ff; --blue:#2f6bf0; --ok:#4ade80; --or:#fb923c; --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.18);
+  --glass:rgba(255,255,255,.045); --glass2:rgba(255,255,255,.08);
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:0;background:radial-gradient(1100px 700px at 75% 30%,#16294f 0%,#0f1f3d 45%,#0a1428 100%)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.12;letter-spacing:-.025em}
+p{margin:0}
+.todo{background:rgba(251,191,36,.18);color:#fcd34d;border:1px dashed #f59e0b;border-radius:4px;padding:0 5px;font-size:.85em}
+.mesh{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.5;pointer-events:none}
+.wrap{position:relative;z-index:1;max-width:1220px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+
+/* ===== nav ===== */
+nav{position:sticky;top:0;z-index:30;background:rgba(10,20,40,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:14px}
+nav .brand{font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px}
+nav .brand i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+nav .tabs{display:flex;gap:4px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:4px}
+nav .tabs a{padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;color:var(--ink2);transition:.15s;white-space:nowrap}
+nav .tabs a b{color:var(--cyan);font-weight:700;margin-right:6px}
+nav .tabs a:hover{color:#fff;background:rgba(255,255,255,.06)}
+nav .tabs a.on{background:#fff;color:var(--bg2)} nav .tabs a.on b{color:var(--blue)}
+nav .cta{font-size:13px;font-weight:700;background:var(--blue);color:#fff;border-radius:999px;padding:9px 16px}
+nav .cta:hover{background:#1f57d6}
+body.home nav .tabs{display:none}
+@media (max-width:820px){nav .tabs a span{display:none}nav .tabs a b{margin:0}nav .cta{display:none}}
+
+/* ===== home ===== */
+body:not(.home) #home{display:none}
+body.home .sec{display:none}
+#home .wrap{min-height:calc(100vh - 60px);display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,5vw,72px);align-items:center;padding-block:40px}
+#home .k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);font-weight:700}
+#home h1{font-size:clamp(38px,5.6vw,72px);font-weight:800;letter-spacing:-.035em;line-height:1;margin-top:16px}
+#home h1 span{color:var(--cyan)}
+#home .lead{margin-top:18px;font-size:clamp(16px,1.5vw,19px);color:var(--ink2);max-width:620px;line-height:1.55}
+#home .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;margin-top:22px;max-width:680px}
+#home .facts>div{display:grid;grid-template-columns:122px 1fr;gap:8px;padding:8px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink2);line-height:1.4}
+#home .facts>div:nth-child(-n+2){border-top:0}
+#home .facts b{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-top:3px}
+#home .facts em{font-style:normal;color:#fff;font-weight:600}
+#home .facts .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok);margin-right:7px;vertical-align:middle;box-shadow:0 0 0 3px rgba(74,222,128,.18)}
+@media (max-width:620px){#home .facts{grid-template-columns:1fr}#home .facts>div:nth-child(2){border-top:1px solid var(--line)}}
+#home .ach{margin-top:26px;max-width:680px;border:1px solid var(--line2);background:var(--glass);backdrop-filter:blur(6px);border-radius:16px;padding:15px 20px 17px}
+#home .ach .achlb{display:flex;align-items:center;gap:9px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);font-weight:700}
+#home .ach .achlb::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(74,222,128,.18);flex:none}
+#home .nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 20px;margin-top:13px}
+#home .nums b{display:block;font-size:25px;font-weight:800;letter-spacing:-.03em}
+#home .nums span{display:block;font-size:11px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;line-height:1.3;margin-top:2px}
+@media (max-width:620px){#home .nums{grid-template-columns:1fr 1fr}}
+#home .right{display:flex;flex-direction:column;align-items:center;gap:30px}
+#home .enter{display:grid;grid-template-columns:1fr;gap:10px;width:100%;max-width:400px}
+#home .enter a{border:1px solid var(--line2);background:var(--glass);backdrop-filter:blur(6px);border-radius:14px;padding:16px 16px 14px;transition:.2s;display:block}
+#home .enter a:hover{background:#fff;color:var(--bg2);transform:translateY(-3px)}
+#home .enter i{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--cyan)}
+#home .enter a:hover i{color:var(--blue)}
+#home .enter b{display:block;font-size:15px;font-weight:700;margin-top:6px;line-height:1.25}
+#home .enter small{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+#home .enter a:hover small{color:#5b6b8f}
+#home .photo{justify-self:center;position:relative;width:min(330px,72vw);aspect-ratio:1}
+#home .photo::before{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 200deg,var(--cyan),var(--blue) 40%,transparent 70%,var(--cyan));opacity:.9;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(1turn)}}
+#home .photo::after{content:"";position:absolute;inset:-6px;border-radius:50%;background:var(--bg2)}
+#home .photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+#home .badge{position:absolute;z-index:2;background:#fff;color:var(--bg2);border-radius:12px;padding:10px 14px;font-size:12px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+#home .badge b{display:block;font-size:18px;letter-spacing:-.02em}
+#home .b1{left:-16px;bottom:34px} #home .b2{right:-10px;top:30px}
+@media (max-width:900px){#home .wrap{grid-template-columns:1fr;padding-top:32px}#home .right{display:contents}#home .photo{order:-1;width:min(240px,60vw);margin-inline:auto}#home .enter{max-width:none;margin-top:30px}#home .badge{display:none}}
+@media (prefers-reduced-motion:reduce){#home .photo::before{animation:none}}
+
+/* ===== sections ===== */
+.sec{display:none;padding:34px 0 60px}
+.sec.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.head{display:grid;grid-template-columns:1fr auto;gap:16px 28px;align-items:end;margin-bottom:22px}
+.head .k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);font-weight:700}
+.head h2{font-size:clamp(26px,3.2vw,38px);font-weight:800;margin-top:8px}
+.head p{color:var(--ink2);margin-top:8px;max-width:820px;font-size:15.5px}
+.head .nx{display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;font-weight:600;font-size:13.5px;border:1px solid var(--line2);background:var(--glass);cursor:pointer;transition:.15s;color:#fff}
+.btn:hover{background:#fff;color:var(--bg2);border-color:#fff}
+.btn.p{background:var(--blue);border-color:var(--blue)}
+.btn.p:hover{background:#fff;color:var(--bg2);border-color:#fff}
+@media (max-width:700px){.head{grid-template-columns:1fr}}
+
+.grid{display:grid;gap:14px;align-items:start}
+.c12{grid-template-columns:repeat(12,1fr)}
+.card{background:var(--glass);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;backdrop-filter:blur(8px);box-shadow:0 20px 60px -30px rgba(0,0,0,.6)}
+.card h3{font-size:16px;font-weight:700;display:flex;align-items:center;gap:10px}
+.card h3 i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);display:inline-block;flex:none}
+.card h3 i.or{background:var(--or);box-shadow:0 0 10px var(--or)}
+.card .sub{color:var(--muted);font-size:13px;margin-top:4px}
+.s4{grid-column:span 4} .s5{grid-column:span 5} .s6{grid-column:span 6} .s7{grid-column:span 7} .s8{grid-column:span 8} .s12{grid-column:span 12}
+@media (max-width:1000px){.s4,.s5,.s6,.s7,.s8{grid-column:span 12}}
+
+/* KPIs */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:var(--glass2);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.kpi b{display:block;font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.kpi b.or{color:var(--or)} .kpi b.ok{color:var(--ok)} .kpi b.cy{color:var(--cyan)}
+.kpi span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.35}
+@media (max-width:700px){.kpis{grid-template-columns:1fr 1fr}}
+.scope{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;font-size:13.5px;color:var(--ink2)}
+.scope div b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.chart{position:relative;margin-top:8px}
+.chart svg{width:100%;height:auto;display:block}
+.tip{position:absolute;pointer-events:none;background:#fff;color:var(--bg2);border-radius:8px;padding:5px 9px;font-size:11.5px;font-weight:700;transform:translate(-50%,-125%);opacity:0;transition:opacity .15s;white-space:nowrap}
+
+/* rows + steps */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.vs .col{border:1px solid var(--line);border-radius:14px;padding:14px 18px 16px;background:rgba(255,255,255,.03)}
+.vs .col.now{border-color:rgba(74,222,128,.32);background:linear-gradient(180deg,rgba(74,222,128,.09),rgba(255,255,255,.03))}
+.vs h5{margin:0;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#f87171}
+.vs .col.now h5{color:var(--ok)}
+.vs ul{list-style:none;margin:6px 0 0;padding:0}
+.vs li{display:grid;grid-template-columns:16px 1fr;gap:11px;padding:11px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink2);line-height:1.45}
+.vs li:first-child{border-top:0}
+.vs i{font-style:normal;font-weight:800;color:#f87171;line-height:1.45}
+.vs .col.now i{color:var(--ok)}
+.vs li b{color:#fff;font-weight:700}
+@media (max-width:760px){.vs{grid-template-columns:1fr}}
+.map{display:grid;grid-template-columns:1fr 54px .95fr;gap:12px;margin-top:14px;align-items:stretch}
+.map .grp{border:1px solid rgba(127,211,255,.25);background:linear-gradient(180deg,rgba(47,107,240,.12),rgba(255,255,255,.03));border-radius:14px;padding:12px 14px 14px}
+.map .grp+.grp{margin-top:12px}
+.map h5{margin:0 0 9px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);font-weight:700}
+.map .ch{display:flex;flex-wrap:wrap;gap:6px}
+.map .ch span{font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line2);color:#fff}
+.map .arw{display:flex;align-items:center;justify-content:center;position:relative}
+.map .arw::before{content:"";position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,rgba(127,211,255,.15),rgba(74,222,128,.7))}
+.map .arw::after{content:"";width:0;height:0;border-left:11px solid var(--ok);border-top:7px solid transparent;border-bottom:7px solid transparent;position:absolute;right:0}
+.map .res{border:1px solid rgba(74,222,128,.38);background:linear-gradient(180deg,rgba(74,222,128,.13),rgba(255,255,255,.03));border-radius:14px;padding:13px 16px 15px;display:flex;flex-direction:column;justify-content:center}
+.map .res h5{color:var(--ok)}
+.map .rk{padding:8px 0;border-top:1px solid var(--line)}
+.map .rk:first-of-type{border-top:0;padding-top:0}
+.map .rk>b{display:block;font-size:19px;font-weight:800;letter-spacing:-.02em}
+.map .rk b.in{display:inline;font-size:inherit;color:#fff;font-weight:700}
+.map .rk>span{display:block;font-size:12.5px;color:var(--ink2);line-height:1.4;margin-top:2px}
+@media (max-width:860px){.map{grid-template-columns:1fr;gap:10px}.map .arw{height:34px}.map .arw::before{left:50%;right:auto;top:0;bottom:0;width:1px;height:auto;background:linear-gradient(180deg,rgba(127,211,255,.15),rgba(74,222,128,.7))}.map .arw::after{right:auto;left:50%;bottom:0;transform:translateX(-50%);border-left:7px solid transparent;border-right:7px solid transparent;border-top:11px solid var(--ok);border-bottom:0}}
+.rows{margin-top:12px;display:grid;gap:8px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.03);font-size:14px;color:var(--ink2)}
+.row .c{font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:rgba(127,211,255,.15);color:var(--cyan);white-space:nowrap}
+.row .c.ok{background:rgba(74,222,128,.15);color:var(--ok)}
+.timeline{margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.timeline.w8{grid-template-columns:repeat(8,1fr)}
+@media (max-width:1000px){.timeline.w8{grid-template-columns:repeat(4,1fr)}}
+.tl{position:relative;font-size:12px;padding:10px 12px 10px 24px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.03)}
+.tl::before{content:"";position:absolute;left:9px;top:14px;width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+.tl:first-child::before{background:var(--or);box-shadow:0 0 8px var(--or)} .tl:last-child::before{background:var(--ok);box-shadow:0 0 8px var(--ok)}
+.tl b{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan)}
+.tl strong{display:block;font-weight:700;margin-top:2px;font-size:13px}
+.tl span{display:block;color:var(--muted);font-size:11.5px;margin-top:2px;line-height:1.3}
+@media (max-width:520px){.timeline,.timeline.w8{grid-template-columns:1fr 1fr}}
+
+/* career */
+.job{display:grid;grid-template-columns:150px 1fr;gap:6px 22px;padding:18px 0;border-top:1px solid var(--line);position:relative}
+.job:first-child{border-top:0;padding-top:0}
+.job .yr{font-size:12px;color:var(--muted);font-weight:600;padding-top:4px;letter-spacing:.04em}
+.job h4{font-size:18px;font-weight:700}
+.job .co{color:var(--muted);font-size:13.5px;margin-top:2px}
+.job ul{margin:8px 0 0;padding-left:18px;color:var(--ink2);font-size:14px;line-height:1.5}
+.job li{margin-bottom:4px}
+.job li::marker{color:var(--cyan)}
+.job li b{font-weight:700;color:#fff}
+@media (max-width:700px){.job{grid-template-columns:1fr}}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0 4px;counter-reset:st}
+.steps div{position:relative;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:10px 10px 10px 12px;font-size:12.5px;color:var(--ink2);line-height:1.35}
+.steps div::before{counter-increment:st;content:"0" counter(st);display:block;font-size:10.5px;letter-spacing:.12em;color:var(--cyan);font-weight:700;margin-bottom:4px}
+.steps div b{display:block;color:#fff;font-size:13px;font-weight:700}
+.steps div>span{display:block;color:var(--muted);font-size:11.5px;margin:2px 0 4px}
+.steps .todo{display:inline;font-size:11px}
+.steps div.on{background:linear-gradient(180deg,rgba(47,107,240,.28),rgba(47,107,240,.12));border-color:rgba(127,211,255,.45)}
+.steps div.on::after{content:"";position:absolute;top:10px;right:10px;width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(74,222,128,.2)}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+.list{margin:0;padding:0;list-style:none}
+.list li{padding:10px 0;border-top:1px solid var(--line);font-size:14px;display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start}
+.list li:first-child{border-top:0;padding-top:0}
+.list li .ic{width:30px;height:30px;border-radius:9px;background:rgba(251,146,60,.15);color:var(--or);display:grid;place-items:center}
+.list li .ic.b{background:rgba(127,211,255,.15);color:var(--cyan)}
+.list li .ic svg{width:16px;height:16px}
+.list li b{display:block;font-weight:700}
+.list li span{color:var(--muted);font-size:13px;line-height:1.4}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:8px;background:rgba(127,211,255,.12);color:var(--cyan);border:1px solid rgba(127,211,255,.2)}
+.chip.n{background:rgba(255,255,255,.06);color:var(--ink2);border-color:var(--line)}
+.lab{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:14px}
+.lab:first-of-type{margin-top:10px}
+
+/* projects */
+.pj{background:var(--glass2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;transition:.2s;display:flex;flex-direction:column}
+.pj:hover{transform:translateY(-3px);border-color:var(--line2);background:rgba(255,255,255,.1)}
+.pj .top{display:flex;align-items:center;gap:10px}
+.pj .ic{width:36px;height:36px;border-radius:10px;background:rgba(127,211,255,.14);color:var(--cyan);display:grid;place-items:center;flex:none}
+.pj .ic svg{width:19px;height:19px}
+.pj .ic.or{background:rgba(251,146,60,.15);color:var(--or)} .pj .ic.ok{background:rgba(74,222,128,.14);color:var(--ok)}
+.pj .k{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.pj h4{font-size:15px;font-weight:700;margin-top:2px}
+.pj p{color:var(--ink2);font-size:13px;margin-top:10px;line-height:1.45;flex:1}
+.pj .r{margin-top:10px;font-size:12.5px;font-weight:700;color:var(--ok);display:flex;gap:6px;align-items:center}
+.pj .r::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ok)}
+.pj .r.m{color:var(--muted)} .pj .r.m::before{background:var(--muted)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+@media (max-width:1000px){.g3{grid-template-columns:1fr 1fr}} @media (max-width:640px){.g3{grid-template-columns:1fr}}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.gal figure{margin:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--bg3);cursor:zoom-in;aspect-ratio:4/3}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.35s;filter:saturate(.9)}
+.gal figure:hover img{transform:scale(1.05);filter:saturate(1)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;font-size:11px;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(10,20,40,.85))}
+@media (max-width:900px){.gal{grid-template-columns:repeat(3,1fr)}} @media (max-width:600px){.gal{grid-template-columns:1fr 1fr}}
+.lb{position:fixed;inset:0;background:rgba(3,8,18,.94);display:none;align-items:center;justify-content:center;z-index:100;padding:24px;cursor:zoom-out}
+.lb.open{display:flex}
+.lb img{max-width:min(96vw,1200px);max-height:88vh;object-fit:contain;border-radius:10px}
+.foot{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center}
+.pager{display:flex;gap:8px}
+</style>
+</head>
+<body class="home">
+
+<svg class="mesh" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <pattern id="hex" width="56" height="48.5" patternUnits="userSpaceOnUse" patternTransform="scale(1.4)"><path d="M28 0l28 16v32L28 64 0 48V16z" transform="translate(0 -8) scale(1 .76)" fill="none" stroke="rgba(127,211,255,.10)" stroke-width="1"/></pattern>
+    <linearGradient id="fadeh" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".6" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <mask id="mh"><rect width="1600" height="900" fill="url(#fadeh)"/></mask>
+  </defs>
+  <rect width="1600" height="900" fill="url(#hex)" mask="url(#mh)"/>
+  <g fill="none" stroke="rgba(127,211,255,.35)" stroke-width="1.2" mask="url(#mh)">
+    <path d="M0 700L120 640 240 560 360 610 480 430 600 480 720 300 840 380 960 260 1080 340 1200 220 1320 300 1440 200 1600 260"/>
+    <path d="M0 780L140 730 280 660 420 700 560 560 700 600 840 470 980 520 1120 420 1260 470 1400 380 1600 420" stroke="rgba(47,107,240,.35)"/>
+    <path d="M0 620L160 560 300 480 440 520 580 360 720 400 860 240 1000 300 1140 180 1280 250 1420 140 1600 200" stroke="rgba(127,211,255,.18)"/>
+  </g>
+  <g fill="#7fd3ff" mask="url(#mh)"><circle cx="480" cy="430" r="4"/><circle cx="720" cy="300" r="4"/><circle cx="960" cy="260" r="4"/><circle cx="1200" cy="220" r="4"/><circle cx="1440" cy="200" r="4"/><circle cx="240" cy="560" r="4"/></g>
+</svg>
+
+<nav><div class="wrap">
+  <a class="brand" href="#" data-home><i></i>Axel Uribe</a>
+  <div class="tabs">
+    <a href="#actual" data-s="actual"><b>01</b><span>Trabajo actual y logros</span></a>
+    <a href="#carrera" data-s="carrera"><b>02</b><span>Carrera y reconocimientos</span></a>
+    <a href="#proyectos" data-s="proyectos"><b>03</b><span>Proyectos y galería</span></a>
+  </div>
+  <a class="cta" href="mailto:axeluriben@gmail.com">Contactar</a>
+</div></nav>
+
+<!-- ================= INICIO ================= -->
+<header id="home"><div class="wrap">
+  <div>
+    <div class="k">Encargado de tool room · Herramentales · Moldeo por inyección</div>
+    <h1>Jonnathan Axel<br><span>Uribe Enríquez</span></h1>
+    <p class="lead">Encargado del taller de moldes de una planta de moldeo por inyección: operación continua en cuatro turnos, más de 200 moldes activos y un equipo de más de 20 técnicos. Desarrollo también los sistemas con los que se administra el taller: base de datos, mantenimiento preventivo digital, changeover, planeación y capacidad de carga.</p>
+    <div class="facts">
+      <div><b>Estatus</b><span><em><span class="dot"></span>Actualmente empleado</em></span></div>
+      <div><b>Puesto</b><span><em>Encargado de tool room</em> · desde febrero de 2026</span></div>
+      <div><b>Sector</b><span>Moldeo por inyección · manufactura de conectores</span></div>
+      <div><b>Sede</b><span>Guadalajara, Jalisco</span></div>
+      <div><b>Disponibilidad</b><span>Abierto a reubicación</span></div>
+      <div><b>Idiomas</b><span>Español nativo · inglés técnico de trabajo</span></div>
+    </div>
+    <div class="ach">
+      <div class="achlb">Logros medidos e infraestructura digital propia</div>
+      <div class="nums">
+        <div><b class="or">&gt;85 %</b><span>reducción de downtime lograda</span></div>
+        <div><b class="ok">7 meses</b><span>de gestión continua, febrero a la fecha</span></div>
+        <div><b class="cy">9</b><span>sistemas propios desarrollados y en uso</span></div>
+        <div><b>200+</b><span>moldes activos a cargo · 4 turnos</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="photo">
+      <img src="images/iac.jpg" alt="Jonnathan Axel Uribe Enríquez">
+      <div class="badge b1"><b>Guadalajara</b>reubicación disponible</div>
+      <div class="badge b2"><b>Actualmente empleado</b>encargado de tool room</div>
+    </div>
+    <div class="enter">
+      <a href="#actual" data-s="actual"><i>01</i><b>Trabajo actual y logros</b><small>Puesto vigente · febrero 2026 a la fecha</small></a>
+      <a href="#carrera" data-s="carrera"><i>02</i><b>Carrera y reconocimientos</b><small>Puestos, formación y constancias</small></a>
+      <a href="#proyectos" data-s="proyectos"><i>03</i><b>Proyectos y galería</b><small>Sistemas en uso y trabajo de taller</small></a>
+    </div>
+  </div>
+</div></header>
+
+<main class="wrap">
+
+<!-- ================= 01 ================= -->
+<section class="sec" id="actual">
+  <div class="head">
+    <div><div class="k">01 · Trabajo actual y logros</div><h2>Encargado de tool room · Molex, Guadalajara</h2><p>Puesto vigente desde febrero de 2026. Cuarto puesto dentro de la misma planta, después de ingeniería de diseño, supervisión de turno e ingeniería de tooling. Indicador rector del área: porcentaje de downtime del tool room, con mantenimiento preventivo incluido, medido contra meta interna. Resultado: reducción superior al 85 % desde el arranque de la gestión, con todos los meses cerrados bajo meta a partir del segundo mes.</p></div>
+    <div class="nx"><button class="btn p" data-s="carrera">Siguiente →</button></div>
+  </div>
+
+  <div class="grid c12">
+    <div class="card s5">
+      <h3><i></i>Alcance del puesto</h3>
+      <p class="sub">Responsable del taller de moldes de la planta</p>
+      <div class="scope">
+        <div><b>Moldes activos</b>Más de 200 de inyección</div>
+        <div><b>Operación</b>Continua · 4 turnos</div>
+        <div><b>Equipo</b>Más de 20 toolmakers · supervisor por turno</div>
+        <div><b>Responsabilidad</b>PM, reparaciones, refacciones, headcount, presupuesto</div>
+        <div><b>Reporta a</b>Gerencia de planta · ingeniería corporativa en Asia</div>
+        <div><b>Sistemas propios</b>SQL Server · C# · Python · JS</div>
+        <div style="grid-column:1/-1"><b>Trayectoria en Molex</b>Ingeniero de diseño → Supervisor de turno → Ingeniero de tooling → Encargado del taller</div>
+      </div>
+      <div class="kpis" style="margin-top:16px;grid-template-columns:1fr 1fr">
+        <div class="kpi"><b class="or">&gt;85 %</b><span>reducción de downtime</span></div>
+        <div class="kpi"><b class="ok">7 meses</b><span>de gestión continua</span></div>
+        <div class="kpi"><b class="cy">9</b><span>sistemas propios en uso</span></div>
+        <div class="kpi"><b>200+</b><span>cambios de N/P al mes</span></div>
+      </div>
+    </div>
+    <div class="card s7">
+      <h3><i></i>Downtime del tool room · índice mensual 2026</h3>
+      <p class="sub">Base 100 = enero, línea base previa. La gestión arranca en febrero y desde ahí corre la serie. La línea punteada es la meta interna llevada al mismo índice. Pasa el cursor por los puntos.</p>
+      <div class="chart" id="chart"></div>
+    </div>
+    <div class="card s12">
+      <h3><i class="or"></i>El taller que recibí y el taller de hoy</h3>
+      <p class="sub">Mismo equipo, mismos moldes, misma planta. Lo que cambió es cómo se ve, cómo se decide y cómo se ejecuta el trabajo.</p>
+      <div class="vs">
+        <div class="col">
+          <h5>Febrero 2026</h5>
+          <ul>
+            <li><i>✕</i><span>Downtime del tool room en doble dígito, muy por encima de la meta interna</span></li>
+            <li><i>✕</i><span>Sin base de datos propia: el historial de fallas vivía en Excel, correos y memoria de la gente</span></li>
+            <li><i>✕</i><span>PM ejecutado distinto en cada turno, sin evidencia comparable entre un PM y el siguiente</span></li>
+            <li><i>✕</i><span>Cada changeover empezaba con un análisis manual de qué entra y qué sale, de media hora a varias horas</span></li>
+            <li><i>✕</i><span>Headcount y capacidad se discutían por percepción, no por horas máquina</span></li>
+            <li><i>✕</i><span>Moldes top offender sin causa raíz documentada</span></li>
+            <li><i>✕</i><span>Habilidades de técnicos y supervisores sin matriz ni perfil de egreso</span></li>
+            <li><i>✕</i><span>Anomalías de pieza y de armado detectadas por inspección visual y muestreo, a criterio de cada turno</span></li>
+          </ul>
+        </div>
+        <div class="col now">
+          <h5>Hoy</h5>
+          <ul>
+            <li><i>✓</i><span><b>Downtime bajo meta mes con mes</b>, con reducción superior al 85 % contra la línea base</span></li>
+            <li><i>✓</i><span>Base de datos propia en SQL Server con APIs en C# y dashboards de fallas, MTBF/MTTR, IQN, scrap, refacciones y downtime de planta</span></li>
+            <li><i>✓</i><span>PM Digital: autoevaluación del molde y guía paso a paso al técnico, mismo flujo en los 4 turnos y evidencia comparable de un PM al siguiente</span></li>
+            <li><i>✓</i><span>Changeover App: qué entra y qué sale resaltado en el plano, para más de 200 cambios de N/P al mes</span></li>
+            <li><i>✓</i><span>Headcount derivado de horas máquina y planeador con validación de PM y capacidad de carga</span></li>
+            <li><i>✓</i><span>Causa raíz documentada en los moldes críticos con e-DART, IQN y CAD, reportada a planta y a ingeniería corporativa</span></li>
+            <li><i>✓</i><span>Matriz de habilidades por tarea, perfil de egreso de la academia y gestión basada en principios</span></li>
+            <li><i>✓</i><span><b>Visión por computadora sobre armado de molde y pieza:</b> cambio de paradigma, de revisar por muestreo a detectar la anomalía en el momento, con el mismo criterio en los cuatro turnos</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card s12">
+      <h3><i></i>Mapa: herramientas y resultado</h3>
+      <p class="sub">Los sistemas ya estaban desarrollados antes de tomar el taller. Ponerlos a operar juntos en los cuatro turnos es lo que produjo el resultado.</p>
+      <div class="map">
+        <div class="side">
+          <div class="grp">
+            <h5>Herramientas para el técnico</h5>
+            <div class="ch"><span>PM Digital</span><span>Changeover App</span><span>Explorador de moldes</span><span>Bitácora</span><span>Matriz de habilidades</span><span>Academia</span><span>Visión por computadora</span></div>
+          </div>
+          <div class="grp">
+            <h5>Herramientas de gestión</h5>
+            <div class="ch"><span>Base de datos y APIs</span><span>Dashboards</span><span>Scorecard</span><span>Planeador con validación de PM</span><span>Capacidad de carga</span><span>Headcount y escenarios</span></div>
+          </div>
+        </div>
+        <div class="arw"></div>
+        <div class="res">
+          <h5>Resultado en la operación</h5>
+          <div class="rk"><b class="or">&gt;85 %</b><span>menos downtime contra la línea base</span></div>
+          <div class="rk"><b class="ok">Meta cumplida</b><span>bajo meta interna mes con mes</span></div>
+          <div class="rk"><b>~3,000 h</b><span>de máquina devueltas a producción cada mes, equivalentes a más de <b class="in">USD 1.5 M al año</b> valuadas a la tarifa de hora máquina de la planta</span></div>
+          <div class="rk"><b>Sin licencias</b><span>los nueve sistemas se desarrollaron en casa y a la medida de la operación: sin desarrollo contratado ni renta anual de software</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Sección 1 de 3</span><div class="pager"><button class="btn" data-home>Inicio</button><button class="btn p" data-s="carrera">Siguiente: Carrera y reconocimientos →</button></div></div>
+</section>
+
+<!-- ================= 02 ================= -->
+<section class="sec" id="carrera">
+  <div class="head">
+    <div><div class="k">02 · Carrera y reconocimientos</div><h2>Trayectoria técnica y de gestión</h2><p>Base técnica en diseño de moldes, maquinado CNC y EDM, tool making y reparación con soldadura TIG. Después, ingeniería de proceso de moldeo, instrucción técnica y dirección de un tool room completo. Reconocimientos y constancias documentados.</p></div>
+    <div class="nx"><button class="btn" data-s="actual">← Anterior</button><button class="btn p" data-s="proyectos">Siguiente →</button></div>
+  </div>
+  <div class="grid c12">
+    <div class="card s7">
+      <h3><i></i>Trayectoria</h3>
+      <div style="margin-top:14px">
+        <div class="job">
+          <div class="yr"><span class="todo">MM AAAA</span> a la fecha<br><small style="font-weight:500;letter-spacing:0">4 puestos en la misma planta</small></div>
+          <div><h4>Encargado de tool room</h4><p class="co">Molex (Koch Industries) · Guadalajara, Jalisco · cuatro puestos en la misma planta, de ingeniería de diseño a la dirección del taller</p>
+            <div class="steps">
+              <div><b>Ingeniero de diseño</b><span><span class="todo">MM AAAA</span> a <span class="todo">MM AAAA</span></span>Diseño y modificación de moldes y componentes.</div>
+              <div><b>Supervisor de turno</b><span><span class="todo">MM AAAA</span> a <span class="todo">MM AAAA</span></span>Turno del tool room: reparaciones, prioridades y personal.</div>
+              <div><b>Ingeniero de tooling</b><span><span class="todo">MM AAAA</span> a ene 2026</span>Análisis de fallas, causa raíz y mejora de moldes.</div>
+              <div class="on"><b>Encargado del taller</b><span>Feb 2026 a la fecha</span>Puesto vigente: más de 200 moldes, 4 turnos, más de 20 técnicos.</div>
+            </div>
+            <ul><li>Responsable del tool room en operación continua a 4 turnos, con más de 200 moldes activos: PM, reparaciones, refacciones, métricas, evaluaciones, headcount y presupuesto.</li><li><b>Downtime del tool room reducido más del 85 % desde el arranque de la gestión</b>, con todos los meses cerrados bajo la meta interna a partir del segundo mes.</li><li>Ecosistema digital del taller, PM Digital, Changeover App, planeador con validación de PM, capacidad de carga y modelo de headcount.</li><li>Causa raíz en moldes críticos (e-DART, IQN, CAD/ECTR); reportes y presentaciones en inglés a gerencia de planta y a ingeniería corporativa. Academia técnica, matriz de habilidades y gestión basada en principios (PBM).</li></ul></div>
+        </div>
+        <div class="job">
+          <div class="yr"><span class="todo">MM AAAA</span> a <span class="todo">MM AAAA</span></div>
+          <div><h4><span class="todo">Puesto (p. ej. Ingeniero de Herramentales)</span> · Instructor técnico</h4><p class="co">TE Connectivity · Hermosillo, Sonora · Academia de Moldeo</p>
+            <ul><li>Reparación y modificación de moldes: electrodos de grafito, EDM de cavidades y costillas, insertos P20 con ajuste de −0.001", recubrimiento TIG con remaquinado CNC, pulido y ajuste de sello.</li><li>Instructor de la Academia de Moldeo (segunda generación). Asistente en Python para cambios de configuración de moldes.</li></ul></div>
+        </div>
+        <div class="job">
+          <div class="yr"><span class="todo">MM AAAA</span> a <span class="todo">MM AAAA</span></div>
+          <div><h4><span class="todo">Puesto (Maquinista CNC / Matricero / Diseñador de moldes)</span></h4><p class="co"><span class="todo">Proveedor automotriz</span> · <span class="todo">Ciudad</span></p>
+            <ul><li>Maquinado CNC (Haas VF-2) de componentes en D2 para estampado, corte por hilo y tratamiento térmico; fixtures y piezas de acero y aluminio a plano. <span class="todo">1 punto más</span></li></ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="card s5">
+      <h3><i class="or"></i>Reconocimientos</h3>
+      <ul class="list" style="margin-top:12px">
+        <li><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10M17 4v8a5 5 0 0 1-10 0V4M7 6H5a2 2 0 0 0 0 4h2M17 6h2a2 2 0 0 1 0 4h-2"/></svg></div><div><b>TE Connectivity · "Las 500 de Hermosillo"</b><span>Implementación de mejoras en moldeo: calidad, ahorros y entregas a tiempo.</span></div></li>
+        <li><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 16.9 6.1 20l1.2-6.5L2.5 8.9 9.1 8z"/></svg></div><div><b>TE Connectivity · Kaizen "Broken Insert"</b><span>Análisis multidisciplinario de fallas recurrentes de moldes.</span></div></li>
+        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M4 20h4l10-10-4-4L4 16z"/></svg></div><div><b>Ponente · "Ciencia de datos en la dark web"</b><span>30 Semana Nacional de Investigación y Docencia en Matemáticas, Universidad de Sonora.</span></div></li>
+        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div><div><b>Instructor · Academia de Moldeo, TE Connectivity</b><span>Formación de la segunda generación de técnicos.</span></div></li>
+      </ul>
+      <p style="margin-top:12px"><a class="btn" href="reconocimientos.html">Ver constancias y reconocimientos →</a></p>
+    </div>
+    <div class="card s5">
+      <h3><i></i>Formación</h3>
+      <ul class="list" style="margin-top:12px">
+        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div><div><b><span class="todo">Carrera</span></b><span><span class="todo">Universidad, ciudad, año</span></span></div></li>
+        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><div><b>IA y machine learning</b><span>Con el Dr. Julio Waissman, Universidad de Sonora <span class="todo">programa / años</span></span></div></li>
+        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div><div><b>Moldeo Sistemático</b><span>Proceso independiente de la máquina, mejora con datos, comportamiento de polímeros.</span></div></li>
+        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div><div><b>DeepLearning.AI y Johns Hopkins (Coursera)</b><span>Neural Networks and Deep Learning · CNN · Sequence Models · Data Scientist’s Toolbox · R Programming</span></div></li>
+        <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div><div><b><span class="todo">RJG / hot runner / lean / ISO 13485</span></b><span>si aplica</span></div></li>
+      </ul>
+    </div>
+    <div class="card s7">
+      <h3><i></i>Habilidades</h3>
+      <div class="lab">Herramentales y proceso</div>
+      <div class="chips"><span class="chip">Mantenimiento y overhaul de moldes</span><span class="chip">PM · TPM · planeación de moldes</span><span class="chip">Hot runner Altanium Neo5</span><span class="chip">RJG e-DART · DOE · moldeo científico</span><span class="chip">8D · Kaizen · PDCA · IQN</span></div>
+      <div class="lab">Manufactura y datos</div>
+      <div class="chips"><span class="chip n">CNC Haas · EDM penetración e hilo · TIG</span><span class="chip n">SolidWorks · MasterCAM · AutoCAD</span><span class="chip n">SQL Server · C# ASP.NET · HTML/JS</span><span class="chip n">Python · ML · visión (YOLO)</span><span class="chip n">SAP / Opcenter · Power Automate</span></div>
+      <div class="lab">Liderazgo</div>
+      <p style="font-size:13.5px;color:var(--ink2);margin-top:8px;line-height:1.5">Desarrollo de habilidades blandas para la gestión del personal en un entorno basado en valores: principios traducidos a variables duras, gap analysis y planes con responsable y fecha. Equipos multiturno 24/7, presupuesto y headcount, reportes y presentaciones en inglés, colaboración con ingeniería en Asia.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Sección 2 de 3</span><div class="pager"><button class="btn" data-s="actual">← Trabajo actual</button><button class="btn p" data-s="proyectos">Siguiente: Proyectos y galería →</button></div></div>
+</section>
+
+<!-- ================= 03 ================= -->
+<section class="sec" id="proyectos">
+  <div class="head">
+    <div><div class="k">03 · Proyectos y galería</div><h2>Sistemas desarrollados y trabajo de taller</h2><p>Nueve sistemas desarrollados internamente sobre SQL Server, C#, Python y JavaScript, en uso en piso. Abajo, una selección de maquinados y reparaciones de molde documentados en taller.</p></div>
+    <div class="nx"><button class="btn" data-s="carrera">← Anterior</button><button class="btn p" data-home>Inicio</button></div>
+  </div>
+  <div class="card">
+    <h3><i></i>Sistemas en operación</h3>
+    <div class="g3">
+      <div class="pj"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div><div><div class="k">Datos</div><h4>Base de datos del taller y APIs</h4></div></div><p>SQL Server con esquema propio de mantenimiento; handlers en C# para fallas, IQN, scrap, PM y downtime.</p><div class="r">Un solo origen de datos</div></div>
+      <div class="pj"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 3 5-8 4 5M3 21h18"/></svg></div><div><div class="k">Analítica</div><h4>Dashboards del Tool Room</h4></div></div><p>Fallas por molde, MTBF/MTTR, %DT vs meta, IQN y scrap, downtime de planta, SAU, explorador de moldes.</p><div class="r">Junta diaria con datos</div></div>
+      <div class="pj"><div class="top"><div class="ic ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 11l2 2 4-4M12 18h.01"/></svg></div><div><div class="k">Mantenimiento</div><h4>PM Digital</h4></div></div><p>Autoevaluación del molde y guía paso a paso del PM para el técnico, en las cinco etapas del mantenimiento; comparación PM contra PM.</p><div class="r">PM estandarizado en los 4 turnos</div></div>
+      <div class="pj"><div class="top"><div class="ic ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10h14l-4-4M17 14H3l4 4"/></svg></div><div><div class="k">Changeover</div><h4>Changeover App</h4></div></div><p>Qué entra y qué sale entre números de parte, resaltado en el plano; catálogo de zonas.</p><div class="r">Más de 200 cambios de N/P al mes</div></div>
+      <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M16 3v4M8 3v4M4 11h16"/></svg></div><div><div class="k">Planeación</div><h4>Planeador con validación de PM</h4></div></div><p>Un molde no corre una orden si alcanza 100 % de PM o excede su vida restante. Alertas y PM predictivo.</p><div class="r">Planes inviables detectados antes de piso</div></div>
+      <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><div class="k">Planeación</div><h4>Capacidad de carga</h4></div></div><p>Changeovers, PM y reparaciones convertidos a carga diaria por técnico; redistribución solo hacia atrás.</p><div class="r">Capacidad diaria cuantificada</div></div>
+      <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0114 0M16 4.5a3.5 3.5 0 010 7M22 20a6 6 0 00-4-5.6"/></svg></div><div><div class="k">Personas</div><h4>Headcount y escenarios</h4></div></div><p>Headcount derivado de las horas máquina disponibles; escenarios de cobertura y distribución por turno.</p><div class="r">Caso de staffing sustentado</div></div>
+      <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 6-6"/></svg></div><div><div class="k">Personas</div><h4>Bitácora y scorecard</h4></div></div><p>Desempeño por técnico y supervisor, matriz de habilidades por tarea, retornos.</p><div class="r">Ruta de desarrollo por técnico</div></div>
+      <div class="pj"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><div><div class="k">Visión</div><h4>HORUS · visión por computadora</h4></div></div><p>Validación del armado de molde y detección de anomalías en pieza con modelos de visión (YOLO): de revisar por muestreo a detectar en el momento, con el mismo criterio en los 4 turnos.</p><div class="r m">Cambio de paradigma en inspección</div></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <h3><i class="or"></i>Galería de maquinados y reparaciones</h3>
+    <p class="sub">Toca una foto para ampliarla. Galería completa en la <a href="industrial.html" style="color:var(--cyan);font-weight:600">página de CAD/CAM</a>.</p>
+    <div class="gal" id="gal">
+      <figure><img src="images/pppprimero.jpg" alt="Componente D2 maquinado en CNC" loading="lazy"><figcaption>D2 para estampado · Haas VF-2 · 3 setups</figcaption></figure>
+      <figure><img src="images/tercero.png" alt="Componente D2, acabado CNC" loading="lazy"><figcaption>D2 · acabado CNC</figcaption></figure>
+      <figure><img src="images/tt1.jpg" alt="Pieza D2 tras corte por hilo" loading="lazy"><figcaption>D2 · hilo · tratamiento térmico</figcaption></figure>
+      <figure><img src="images/ele1.jpg" alt="Electrodo de grafito para EDM" loading="lazy"><figcaption>Electrodo de grafito · EDM de cavidad</figcaption></figure>
+      <figure><img src="images/ele4.jpg" alt="Inserto P20 ajustado" loading="lazy"><figcaption>Inserto P20 · ajuste −0.001" · TIG</figcaption></figure>
+      <figure><img src="images/repa12.jpg" alt="Inserto nuevo con costillas por EDM" loading="lazy"><figcaption>Inserto nuevo · costillas por EDM</figcaption></figure>
+      <figure><img src="images/r1.jpg" alt="Recubrimiento TIG" loading="lazy"><figcaption>Recubrimiento TIG · ajuste de sello</figcaption></figure>
+      <figure><img src="images/m1.jpg" alt="Piezas maquinadas" loading="lazy"><figcaption>Acero y aluminio a plano</figcaption></figure>
+    </div>
+    <div class="g3">
+      <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.4 2.4-2.1-.6-.6-2.1z"/></svg></div><div><div class="k">Reparación</div><h4>CNC + EDM + TIG</h4></div></div><p>1. Electrodo de grafito · 2. EDM de cavidad para inserto · 3. Inserto P20, ajuste −0.001" · 4. Soldadura de sujeción y pulido · 5. Ajuste de parte móvil</p></div>
+      <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.4 2.4-2.1-.6-.6-2.1z"/></svg></div><div><div class="k">Reparación</div><h4>Inserto nuevo con costillas</h4></div></div><p>1. Electrodo de grafito · 2. Inserto P20 en CNC · 3. Barrenos de sujeción · 4. EDM de costillas</p></div>
+      <div class="pj"><div class="top"><div class="ic or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.4 2.4-2.1-.6-.6-2.1z"/></svg></div><div><div class="k">Reparación</div><h4>Soldadura y sello</h4></div></div><p>1. Recubrimiento TIG · 2. Desbaste en CNC · 3. Pulido manual (turboLap) · 4. Ajuste de sello</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Sección 3 de 3 · © <span id="yr"></span> Jonnathan Axel Uribe Enríquez · axeluriben@gmail.com</span><div class="pager"><button class="btn" data-s="carrera">← Carrera</button><button class="btn p" data-home>Volver al inicio</button></div></div>
+</section>
+</main>
+
+<div class="lb" id="lb"><img id="lbimg" alt=""></div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+function goHome(){ document.body.classList.add('home'); document.querySelectorAll('nav .tabs a').forEach(function(a){ a.classList.remove('on'); }); try{ history.replaceState(null,'',location.pathname); }catch(e){} window.scrollTo({top:0,behavior:'smooth'}); }
+function go(id){
+  document.body.classList.remove('home');
+  document.querySelectorAll('.sec').forEach(function(s){ s.classList.toggle('on', s.id === id); });
+  document.querySelectorAll('nav .tabs a').forEach(function(a){ a.classList.toggle('on', a.dataset.s === id); });
+  try { history.replaceState(null, '', '#' + id); } catch(e){}
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+document.addEventListener('click', function(e){
+  var h = e.target.closest('[data-home]'); if (h){ e.preventDefault(); goHome(); return; }
+  var el = e.target.closest('[data-s]'); if (el){ e.preventDefault(); go(el.dataset.s); return; }
+  var f = e.target.closest('#gal figure'); if (f){ document.getElementById('lbimg').src = f.querySelector('img').src; document.getElementById('lb').classList.add('open'); }
+});
+document.getElementById('lb').addEventListener('click', function(){ document.getElementById('lb').classList.remove('open'); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') document.getElementById('lb').classList.remove('open'); });
+var h0 = location.hash.slice(1); if (h0 && document.getElementById(h0) && document.getElementById(h0).classList.contains('sec')) go(h0);
+
+/* chart */
+(function(){
+  var data = [['Ene',100],['Feb',51],['Mar',46],['Abr',32],['May',15],['Jun',10],['Jul',14],['Ago',28]], target = 33;
+  var W=900,H=330,pl=44,pr=16,pt=22,pb=30,maxY=112;
+  var x=function(i){return pl+i*(W-pl-pr)/(data.length-1)}, y=function(v){return pt+(H-pt-pb)*(1-v/maxY)};
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Indice mensual de downtime del tool room, 2026"><defs><linearGradient id="ga" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#7fd3ff" stop-opacity=".3"/><stop offset="1" stop-color="#7fd3ff" stop-opacity="0"/></linearGradient></defs>';
+  [0,25,50,75,100].forEach(function(v){ s+='<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="rgba(255,255,255,.08)"/><text x="'+(pl-8)+'" y="'+(y(v)+4)+'" text-anchor="end" font-size="11" fill="#93a4c9" font-family="Inter,sans-serif">'+v+'</text>'; });
+  var path=data.map(function(d,i){return (i?'L':'M')+x(i)+' '+y(d[1])}).join(' ');
+  s+='<path d="'+path+' L'+x(7)+' '+y(0)+' L'+x(0)+' '+y(0)+'Z" fill="url(#ga)"/>';
+  s+='<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+y(target)+'" y2="'+y(target)+'" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="6 5"/><text x="'+(pl+8)+'" y="'+(y(target)-7)+'" text-anchor="start" font-size="11" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">meta interna</text>';
+  s+='<line x1="'+x(1)+'" x2="'+x(1)+'" y1="'+pt+'" y2="'+y(0)+'" stroke="rgba(255,255,255,.5)" stroke-dasharray="3 4"/><text x="'+(x(1)+6)+'" y="'+(pt+10)+'" font-size="11" font-weight="600" fill="#fff" font-family="Inter,sans-serif">inicio de la gestión</text>';
+  s+='<path d="'+path+'" fill="none" stroke="#7fd3ff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>';
+  data.forEach(function(d,i){ s+='<text x="'+x(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="12" font-weight="600" fill="#93a4c9" font-family="Inter,sans-serif">'+d[0]+'</text><circle class="p" data-i="'+i+'" cx="'+x(i)+'" cy="'+y(d[1])+'" r="6" fill="'+(d[1]<=target?'#4ade80':'#fb923c')+'" stroke="#0f1f3d" stroke-width="3" style="cursor:pointer"/><text x="'+x(i)+'" y="'+(y(d[1])-13)+'" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Inter,sans-serif">'+d[1]+'</text>'; });
+  s+='</svg><div class="tip" id="tip"></div>';
+  var box=document.getElementById('chart'); box.innerHTML=s; var tip=document.getElementById('tip');
+  box.querySelectorAll('.p').forEach(function(c){
+    var show=function(){ var i=+c.dataset.i, rc=c.getBoundingClientRect(), b=box.getBoundingClientRect(); tip.textContent=data[i][0]+' 2026 · índice '+data[i][1]+' · '+(data[i][1]<=target?'bajo meta':'sobre meta'); tip.style.left=(rc.left+rc.width/2-b.left)+'px'; tip.style.top=(rc.top-b.top)+'px'; tip.style.opacity=1; c.setAttribute('r',9); };
+    var hide=function(){ tip.style.opacity=0; c.setAttribute('r',6); };
+    c.addEventListener('mouseenter',show); c.addEventListener('mouseleave',hide); c.addEventListener('click',function(){show();setTimeout(hide,1800);});
+  });
+})();
+</script>
+</body>
+</html>
