@@ -79,7 +79,8 @@ body.home .sec{display:none}
 #home .photo::before{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 200deg,var(--cyan),var(--blue) 40%,transparent 70%,var(--cyan));opacity:.9;animation:spin 18s linear infinite}
 @keyframes spin{to{transform:rotate(1turn)}}
 #home .photo::after{content:"";position:absolute;inset:-6px;border-radius:50%;background:var(--bg2)}
-#home .photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+#home .photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 30px 80px rgba(0,0,0,.5);filter:brightness(.74) contrast(1.06) saturate(.92)}
+#home .photo .ov{position:absolute;inset:0;z-index:2;border-radius:50%;background:radial-gradient(120% 100% at 50% 0,rgba(10,20,40,.10) 0%,rgba(10,20,40,.45) 60%,rgba(10,20,40,.72) 100%);pointer-events:none}
 #home .badge{position:absolute;z-index:2;background:#fff;color:var(--bg2);border-radius:12px;padding:10px 14px;font-size:12px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,.35)}
 #home .badge b{display:block;font-size:18px;letter-spacing:-.02em}
 #home .b1{left:-16px;bottom:34px} #home .b2{right:-10px;top:30px}
@@ -218,6 +219,21 @@ body.home .sec{display:none}
 .pj .r.m{color:var(--muted)} .pj .r.m::before{background:var(--muted)}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
 @media (max-width:1000px){.g3{grid-template-columns:1fr 1fr}} @media (max-width:640px){.g3{grid-template-columns:1fr}}
+.certs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:14px}
+.cert{border:1px solid var(--line2);background:rgba(255,255,255,.05);border-radius:12px;overflow:hidden;cursor:zoom-in;margin:0;transition:.18s}
+.cert:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.cert .fr{height:150px;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,rgba(255,255,255,.02) 0 10px,transparent 10px 20px);position:relative}
+.cert .fr img{max-height:100%;width:auto;object-fit:contain}
+.cert.miss .fr::after{content:attr(data-file);position:absolute;inset:6px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;font-size:11px;color:#fcd34d;background:rgba(251,191,36,.08);border:1px dashed #f59e0b;border-radius:8px}
+.cert.miss img{display:none}
+.cert figcaption{padding:8px 10px 9px;border-top:1px solid var(--line);background:rgba(10,20,40,.45)}
+.cert figcaption b{display:block;font-size:12.5px;font-weight:700;color:#fff;line-height:1.25}
+.cert figcaption span{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+.cl{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.cl a{font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(127,211,255,.10);border:1px solid rgba(127,211,255,.28);color:var(--cyan)}
+.cl a:hover{background:#fff;color:var(--bg2);border-color:#fff}
+@media (max-width:900px){.certs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.certs{grid-template-columns:repeat(2,minmax(0,1fr))}.cert .fr{height:120px}}
 .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
 .gal figure{margin:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--bg3);cursor:zoom-in;aspect-ratio:4/3}
 .gal img{width:100%;height:100%;object-fit:cover;transition:.35s;filter:saturate(.9)}
@@ -285,8 +301,7 @@ body.home .sec{display:none}
   <div class="right">
     <div class="photo">
       <img src="images/iac.jpg" alt="Jonnathan Axel Uribe Enríquez">
-      <div class="badge b1"><b>Guadalajara</b>reubicación disponible</div>
-      <div class="badge b2"><b>Actualmente empleado</b>encargado de tool room</div>
+      <span class="ov"></span>
     </div>
     <div class="enter">
       <a href="#actual" data-s="actual"><i>01</i><b>Trabajo actual y logros</b><small>Puesto vigente · febrero 2026 a la fecha</small></a>
@@ -431,7 +446,6 @@ body.home .sec{display:none}
         <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M4 20h4l10-10-4-4L4 16z"/></svg></div><div><b>Ponente · "Ciencia de datos en la dark web"</b><span>30 Semana Nacional de Investigación y Docencia en Matemáticas, Universidad de Sonora.</span></div></li>
         <li><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div><div><b>Instructor · Academia de Moldeo, TE Connectivity</b><span>Formación de la segunda generación de técnicos.</span></div></li>
       </ul>
-      <p style="margin-top:12px"><a class="btn" href="reconocimientos.html">Ver constancias y reconocimientos →</a></p>
     </div>
     <div class="card s5">
       <h3><i></i>Formación</h3>
@@ -451,6 +465,23 @@ body.home .sec{display:none}
       <div class="chips"><span class="chip n">CNC Haas · EDM penetración e hilo · TIG</span><span class="chip n">SolidWorks · MasterCAM · AutoCAD</span><span class="chip n">SQL Server · C# ASP.NET · HTML/JS</span><span class="chip n">Python · ML · visión (YOLO)</span><span class="chip n">SAP / Opcenter · Power Automate</span></div>
       <div class="lab">Liderazgo</div>
       <p style="font-size:13.5px;color:var(--ink2);margin-top:8px;line-height:1.5">Desarrollo de habilidades blandas para la gestión del personal en un entorno basado en valores: principios traducidos a variables duras, gap analysis y planes con responsable y fecha. Equipos multiturno 24/7, presupuesto y headcount, reportes y presentaciones en inglés, colaboración con ingeniería en Asia.</p>
+    </div>
+    <div class="card s12">
+      <h3><i class="or"></i>Constancias y certificaciones</h3>
+      <p class="sub">Documentos originales de cada reconocimiento y certificación. Toca uno para verlo completo.</p>
+      <div class="certs">
+      <figure class="cert"><div class="fr" data-file="Falta images/estrella.jpg"><img src="images/estrella.jpg" alt="Las 500 de Hermosillo" loading="lazy" onerror="this.closest('.cert').classList.add('miss')"></div><figcaption><b>Las 500 de Hermosillo</b><span>TE Connectivity</span></figcaption></figure>
+      <figure class="cert"><div class="fr" data-file="Falta images/kaizen.jpeg"><img src="images/kaizen.jpeg" alt="Kaizen "Broken Insert"" loading="lazy" onerror="this.closest('.cert').classList.add('miss')"></div><figcaption><b>Kaizen "Broken Insert"</b><span>TE Connectivity</span></figcaption></figure>
+      <figure class="cert"><div class="fr" data-file="Falta images/certificado.jpg"><img src="images/certificado.jpg" alt="Ponencia, dark web" loading="lazy" onerror="this.closest('.cert').classList.add('miss')"></div><figcaption><b>Ponencia, dark web</b><span>Universidad de Sonora</span></figcaption></figure>
+      <figure class="cert"><div class="fr" data-file="Falta images/rjg.jpeg"><img src="images/rjg.jpeg" alt="Moldeo Sistemático" loading="lazy" onerror="this.closest('.cert').classList.add('miss')"></div><figcaption><b>Moldeo Sistemático</b><span>RJG</span></figcaption></figure>
+      <figure class="cert"><div class="fr" data-file="Falta images/udemy.jpeg"><img src="images/udemy.jpeg" alt="Academia de Moldeo" loading="lazy" onerror="this.closest('.cert').classList.add('miss')"></div><figcaption><b>Academia de Moldeo</b><span>Instructor, 2a generación</span></figcaption></figure>
+      <figure class="cert"><div class="fr" data-file="Falta images/neural.png"><img src="images/neural.png" alt="Neural Networks and Deep Learning" loading="lazy" onerror="this.closest('.cert').classList.add('miss')"></div><figcaption><b>Neural Networks and Deep Learning</b><span>DeepLearning.AI</span></figcaption></figure>
+      <figure class="cert"><div class="fr" data-file="Falta images/convo.png"><img src="images/convo.png" alt="Convolutional Neural Networks" loading="lazy" onerror="this.closest('.cert').classList.add('miss')"></div><figcaption><b>Convolutional Neural Networks</b><span>DeepLearning.AI</span></figcaption></figure>
+      <figure class="cert"><div class="fr" data-file="Falta images/sequence.png"><img src="images/sequence.png" alt="Sequence Models" loading="lazy" onerror="this.closest('.cert').classList.add('miss')"></div><figcaption><b>Sequence Models</b><span>DeepLearning.AI</span></figcaption></figure>
+      <figure class="cert"><div class="fr" data-file="Falta images/toolbox.png"><img src="images/toolbox.png" alt="The Data Scientist’s Toolbox" loading="lazy" onerror="this.closest('.cert').classList.add('miss')"></div><figcaption><b>The Data Scientist’s Toolbox</b><span>Johns Hopkins University</span></figcaption></figure>
+      <figure class="cert"><div class="fr" data-file="Falta images/programming.png"><img src="images/programming.png" alt="R Programming" loading="lazy" onerror="this.closest('.cert').classList.add('miss')"></div><figcaption><b>R Programming</b><span>Johns Hopkins University</span></figcaption></figure>
+      </div>
+      <div class="cl"><a href="https://coursera.org/share/3de65404a788978506fb458b29b35232" target="_blank" rel="noopener">Neural Networks and Deep Learning ↗</a><a href="https://coursera.org/share/c8a99ff6f577d34fd3516dad40e2c690" target="_blank" rel="noopener">Convolutional Neural Networks ↗</a><a href="https://coursera.org/share/871790acd412e1f264d943d61d77b13d" target="_blank" rel="noopener">Sequence Models ↗</a><a href="https://coursera.org/share/f37c0324238ea4926a417b97dcb64d2b" target="_blank" rel="noopener">The Data Scientist’s Toolbox ↗</a><a href="https://coursera.org/share/0905b60185ca77ae46c87566cf40fafa" target="_blank" rel="noopener">R Programming ↗</a><a href="https://semana.mat.uson.mx/semanaxxx/" target="_blank" rel="noopener">Semana Nacional de Investigación y Docencia en Matemáticas ↗</a></div>
     </div>
   </div>
   <div class="foot"><span>Sección 2 de 3</span><div class="pager"><button class="btn" data-s="actual">← Trabajo actual</button><button class="btn p" data-s="proyectos">Siguiente: Proyectos y galería →</button></div></div>
@@ -514,7 +545,7 @@ function go(id){
 document.addEventListener('click', function(e){
   var h = e.target.closest('[data-home]'); if (h){ e.preventDefault(); goHome(); return; }
   var el = e.target.closest('[data-s]'); if (el){ e.preventDefault(); go(el.dataset.s); return; }
-  var f = e.target.closest('#gal figure'); if (f){ document.getElementById('lbimg').src = f.querySelector('img').src; document.getElementById('lb').classList.add('open'); }
+  var f = e.target.closest('#gal figure, .cert'); if (f){ document.getElementById('lbimg').src = f.querySelector('img').src; document.getElementById('lb').classList.add('open'); }
 });
 document.getElementById('lb').addEventListener('click', function(){ document.getElementById('lb').classList.remove('open'); });
 document.addEventListener('keydown', function(e){ if (e.key === 'Escape') document.getElementById('lb').classList.remove('open'); });
